@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Remove this From Highlight"
+        android:id="@+id/remhigh"
+        app:showAsAction="always"
+        android:visible="false">
+
+    </item>
+    <item
+        android:title="Edit Highlight Name"
+        android:id="@+id/edhgnm"
+        app:showAsAction="always"
+        android:visible="false">
+
+    </item>
+    <item
+        android:title="Edit"
+        android:id="@+id/edddit"
+        app:showAsAction="always">
+
+    </item>
+    <item
+        android:title="Add More Stories"
+        android:id="@+id/adsto"
+        app:showAsAction="always">
+
+    </item>
+</menu>

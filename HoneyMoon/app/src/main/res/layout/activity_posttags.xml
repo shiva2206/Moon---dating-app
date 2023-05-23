@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".posttags"
+    android:background="@color/red">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_margin="5dp"
+        android:id="@+id/funcd"
+        android:backgroundTint="@color/black">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="post Tags"
+            android:id="@+id/tg"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/black"
+            android:textColor="@color/white">
+
+        </Button>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recy"
+        android:layout_below="@+id/funcd">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:id="@+id/tgpeocd"
+        app:cardCornerRadius="30dp"
+        android:layout_below="@+id/recy"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tag More People"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:id="@+id/tgpeo">
+
+        </TextView>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/newrl"
+        android:layout_below="@+id/tgpeocd"
+        android:layout_margin="5dp"
+        android:visibility="gone">
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sactv"
+            android:hint="Type Here A UserName">
+        </AutoCompleteTextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tgecy"
+            android:layout_below="@+id/sactv">
+        </androidx.recyclerview.widget.RecyclerView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:id="@+id/donecd"
+            app:cardCornerRadius="30dp"
+            android:layout_below="@+id/tgecy"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:textSize="13dp"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:id="@+id/addd"
+                >
+
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

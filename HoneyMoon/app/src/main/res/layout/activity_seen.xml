@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".seen"
+    android:background="@color/red"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/vpger"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp">
+
+        </androidx.viewpager.widget.ViewPager>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vpger"
+            android:background="@color/black"
+            app:cardCornerRadius="30dp"
+            android:id="@+id/cdf">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:id="@+id/noviews"
+                android:text="views 0">
+
+            </Button>
+
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cdf">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/senrecy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="None"
+                android:id="@+id/nn"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:textSize="20dp">
+
+            </TextView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

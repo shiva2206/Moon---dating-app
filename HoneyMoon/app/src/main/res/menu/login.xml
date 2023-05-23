@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Home"
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+
+            >
+
+        </item>
+        <item
+            android:title="Stories"
+            android:id="@+id/story"
+            android:icon="@drawable/storyy"
+            >
+
+        </item>
+        <item
+            android:title="Camera"
+            android:id="@+id/cam"
+            android:icon="@drawable/ic_menu_camera">
+
+        </item>
+        <item
+            android:title="Chats"
+            android:id="@+id/chat"
+            android:icon="@drawable/chaticon"
+            >
+
+        </item>
+        <item
+            android:title="Calls"
+            android:id="@+id/call"
+            android:icon="@drawable/call"
+            >
+
+        </item>
+        <item
+            android:title="Find"
+            android:id="@+id/search"
+            android:icon="@drawable/search"
+            >
+
+        </item>
+        <item
+            android:title="Nearby"
+            android:id="@+id/nearby"
+            android:icon="@drawable/nearme"
+            >
+
+        </item>
+        <item
+            android:title="Toppers"
+            android:id="@+id/topers"
+            android:icon="@drawable/refresh"
+            >
+
+        </item>
+        <item
+            android:title="Flames"
+            android:id="@+id/flait"
+            android:icon="@drawable/like"
+            app:showAsAction="always">
+
+        </item>
+        <item
+            android:title="Notification"
+            android:id="@+id/notify"
+            android:icon="@drawable/notification"
+            >
+
+        </item>
+        <item
+            android:title="Settings"
+            android:id="@+id/settings"
+            android:icon="@drawable/settings"
+            >
+
+        </item>
+        <item
+            android:id="@+id/profile"
+            android:title="My Profile"
+            android:icon="@drawable/profile"
+            >
+
+        </item>
+        <item
+            android:title="Log Out"
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            >
+
+        </item>
+    </group>
+
+
+
+</menu>

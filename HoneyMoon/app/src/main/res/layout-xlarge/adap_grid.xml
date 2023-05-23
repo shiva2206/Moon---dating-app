@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relllls"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    app:cardCornerRadius="30dp"
+    android:layout_margin="5dp"
+    android:backgroundTint="@color/black">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:id="@+id/ttme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:text="12-May-2020 12:00:00"
+            android:textColor="@color/white"
+            android:textSize="5dp"
+            android:visibility="gone">
+
+        </TextView>
+
+
+        <ImageView
+            android:id="@+id/ig"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@color/black"
+            android:foregroundGravity="center"
+            android:src="@drawable/add">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/adn"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:text="Add New"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:layout_marginTop="170dp"
+            android:visibility="gone">
+
+        </TextView>
+
+        <VideoView
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/storyy"
+            android:foregroundGravity="center"
+            android:id="@+id/iv"
+
+            android:visibility="gone">
+
+        </VideoView>
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+
+        android:background="@color/bgredy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:background="@drawable/wave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/honeytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oleo_script_swash_caps_bold"
+                android:text="Honey Moon"
+                android:transitionName="appp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="45dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp">
+
+            </TextView>
+
+
+            <EditText
+                android:id="@+id/usmes"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:layout_centerHorizontal="true"
+                android:maxLines="1"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/honeytext"
+                android:singleLine="true"
+                android:background="@drawable/redwhitefilled"
+                android:hint="Username"
+                android:padding="10dp">
+
+            </EditText>
+
+
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/redwhitefilled"
+                android:padding="10dp"
+                android:layout_below="@+id/usmes"
+                android:layout_marginTop="5dp"
+                >
+
+            </EditText>
+
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:paddingLeft="5dp"
+                android:hint="Email"
+                android:singleLine="true"
+
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/redwhitefilled"
+                android:padding="10dp"
+
+                android:layout_marginTop="5dp">
+
+            </EditText>
+
+
+
+            <!--        <EditText-->
+            <!--            android:id="@+id/phone"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="40dp"-->
+            <!--            android:layout_below="@+id/email"-->
+            <!--            android:layout_marginLeft="50dp"-->
+            <!--            android:layout_marginTop="5dp"-->
+            <!--            android:layout_marginRight="50dp"-->
+            <!--            android:background="#F6F6F6"-->
+            <!--            android:hint="Phone num"-->
+            <!--            android:textSize="20dp">-->
+
+            <!--        </EditText>-->
+
+                <TextView
+                    android:id="@+id/dob"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Birth Date"
+                    android:inputType="date"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+
+
+                    android:paddingLeft="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/redwhitefilled"
+                    android:padding="10dp"
+                    android:layout_below="@+id/email"
+                    android:layout_marginTop="5dp">
+
+                </TextView>
+
+
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dob"
+                android:id="@+id/hosc"
+
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    >
+
+                        <RadioGroup
+                            android:id="@+id/radsex"
+                            android:background="@drawable/redwhitefilled"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:text="Gender"
+                                android:textSize="15dp"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/black"
+                                android:layout_marginRight="10dp"></TextView>
+
+
+
+                            <RadioButton
+                                android:id="@+id/male"
+                                android:layout_width="110dp"
+                                android:layout_height="35dp"
+                                android:buttonTint="@color/black"
+                                android:checked="true"
+
+                                android:text="Male"
+                                android:textSize="15dp">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:layout_width="110dp"
+                                android:layout_height="35dp"
+                                android:text="Female"
+                                android:id="@+id/female"
+                                android:gravity="center"
+                                android:buttonTint="@color/black"
+                                android:layout_marginLeft="5dp">
+                            </RadioButton>
+
+                        </RadioGroup>
+
+
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/redwhitefilled"
+                            android:id="@+id/showcru"
+                            android:layout_marginTop="5dp"
+                            android:padding="7dp"
+                            android:layout_below="@+id/radsex"
+                            android:layout_centerHorizontal="true"
+
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Status"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="5dp">
+
+                            </TextView>
+                            <RadioButton
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="Single"
+                                android:id="@+id/sinle"
+                                android:checked="true"
+                                android:buttonTint="@color/black"
+                                >
+
+                            </RadioButton>
+                            <RadioButton
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="Commited"
+                                android:id="@+id/commited"
+                                android:buttonTint="@color/black"
+                                >
+
+                            </RadioButton>
+                            <RadioButton
+                                android:layout_width="90dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="Married"
+                                android:id="@+id/married"
+                                android:buttonTint="@color/black">
+
+                            </RadioButton>
+
+                        </RadioGroup>
+
+
+
+
+                        <RadioGroup
+                            android:id="@+id/radpri"
+                            android:background="@drawable/redwhitefilled"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/showcru"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal"
+                            android:padding="7dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Privacy"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="15dp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_marginRight="10dp"></TextView>
+                            <RadioButton
+                                android:id="@+id/pulic"
+                                android:layout_width="110dp"
+                                android:layout_height="35dp"
+                                android:buttonTint="@color/black"
+                                android:checked="true"
+                                android:text="Public"
+                                android:textSize="15dp">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:layout_width="110dp"
+                                android:layout_height="35dp"
+                                android:text="Private"
+                                android:id="@+id/priate"
+                                android:buttonTint="@color/black"
+                                android:layout_marginLeft="5dp">
+                            </RadioButton>
+                        </RadioGroup>
+
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/redwhitefilled"
+                android:layout_below="@+id/hosc"
+                android:id="@+id/hei"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Height (cms):"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"
+
+
+                    android:padding="10dp"
+                    android:layout_below="@+id/usmes"
+                    android:layout_marginTop="3dp"></TextView>
+
+
+                <Spinner
+                    android:id="@+id/height"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="-7dp"
+                    android:layout_marginTop="-4dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/wei"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/redwhitefilled"
+                android:layout_below="@+id/hei">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weight (kgs):"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="5dp"
+                    android:layout_centerHorizontal="true"
+
+                    android:padding="10dp"
+                    android:layout_below="@+id/usmes"
+                    android:layout_marginTop="3dp"></TextView>
+
+
+                <Spinner
+                    android:id="@+id/weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="-7dp"
+                    android:layout_marginTop="-4dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+
+
+
+
+
+
+            <EditText
+                    android:id="@+id/password"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="Password"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/wei"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/redwhitefilled"
+                    android:inputType="textPassword">
+
+                </EditText>
+
+
+            <EditText
+                android:id="@+id/repassword"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:hint="Re password"
+
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:background="@drawable/redwhitefilled"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/password"
+                android:layout_marginTop="5dp"
+                >
+
+            </EditText>
+
+
+
+
+
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/solidrect"
+                android:text="Create"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/repassword"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+              >
+
+            </Button>
+
+
+
+
+            <TextView
+                android:id="@+id/ald"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register"
+                android:layout_marginTop="20dp"
+                android:text="Already have Account ? Sign in"
+                android:textColor="@color/bgredy"
+                android:textAlignment="center"
+                android:textSize="16dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/logn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ald"
+                android:layout_marginTop="15dp"
+                android:text="Login"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp">
+
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/starecy"
+                android:visibility="invisible"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

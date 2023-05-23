@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="fragment.home_area"
+    android:background="@color/red"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Search To Chat"
+        android:id="@+id/nn"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textSize="20dp">
+
+    </TextView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/black"
+        app:cardCornerRadius="30dp"
+        android:id="@+id/app"
+        >
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/black"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/searwht"
+                        android:id="@+id/ser">
+
+                    </ImageView>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:layout_toRightOf="@+id/ser"
+                        android:hint="Search"
+                        android:textColorHint="@color/white"
+                        android:textSize="17dp"
+                        android:id="@+id/etx"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:background="@color/black">
+
+                    </EditText>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ecycc"
+        android:layout_below="@+id/app"
+        android:layout_marginTop="10dp"
+        android:layoutAnimation="@anim/layout_fall_down">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ecycc"
+        android:text="--- Others ---"
+        android:id="@+id/dd"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp">
+
+    </TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/othrecy"
+        android:layout_below="@+id/dd"
+        android:layout_marginTop="8dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>

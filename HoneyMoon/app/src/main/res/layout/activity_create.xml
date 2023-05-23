@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login"
+    android:background="@color/black"
+    android:paddingTop="80dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/honeytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oleo_script_swash_caps_bold"
+                android:text="Honey Moon"
+                android:transitionName="appp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="40dp">
+
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:id="@+id/usnmecd"
+                android:layout_below="@+id/honeytext">
+                <EditText
+                    android:id="@+id/usmes"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:paddingLeft="5dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:hint="Username"
+                    android:textSize="15dp">
+
+                </EditText>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:id="@+id/namecd"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/usnmecd">
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:hint="Name"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:textSize="15dp">
+
+                </EditText>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/emailcd"
+                android:layout_below="@+id/namecd">
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/namecd"
+                    android:paddingLeft="5dp"
+                    android:hint="Email"
+                    android:singleLine="true"
+                    android:textSize="15dp">
+
+                </EditText>
+            </androidx.cardview.widget.CardView>
+
+
+            <!--        <EditText-->
+            <!--            android:id="@+id/phone"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="40dp"-->
+            <!--            android:layout_below="@+id/email"-->
+            <!--            android:layout_marginLeft="50dp"-->
+            <!--            android:layout_marginTop="5dp"-->
+            <!--            android:layout_marginRight="50dp"-->
+            <!--            android:background="#F6F6F6"-->
+            <!--            android:hint="Phone num"-->
+            <!--            android:textSize="20dp">-->
+
+            <!--        </EditText>-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/emailcd"
+                android:layout_marginTop="5dp"
+                android:id="@+id/dobcd">
+                <TextView
+                    android:id="@+id/dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:hint="Birth Date"
+                    android:textSize="15dp"
+                    android:inputType="date"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="4dp">
+
+                </TextView>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dobcd"
+                android:id="@+id/hosc">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp"
+                        android:id="@+id/femalecd"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="5dp"
+                        >
+
+                        <RadioGroup
+                            android:id="@+id/radsex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:text="Gender"
+                                android:textSize="15dp"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/black"
+                                android:layout_marginRight="10dp"></TextView>
+
+
+
+                            <RadioButton
+                                android:id="@+id/male"
+                                android:layout_width="110dp"
+                                android:layout_height="35dp"
+                                android:buttonTint="@color/black"
+                                android:checked="true"
+
+                                android:text="Male"
+                                android:textSize="15dp">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:layout_width="110dp"
+                                android:layout_height="35dp"
+                                android:text="Female"
+                                android:id="@+id/female"
+                                android:gravity="center"
+                                android:buttonTint="@color/black"
+                                android:layout_marginLeft="5dp">
+                            </RadioButton>
+
+                        </RadioGroup>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp"
+                        android:id="@+id/domer"
+                        android:layout_below="@+id/femalecd"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerHorizontal="true">
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:orientation="horizontal"
+                            android:id="@+id/showcru"
+
+                            android:layout_centerHorizontal="true"
+
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:text="Status"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="5dp">
+
+                            </TextView>
+                            <RadioButton
+                                android:layout_width="80dp"
+                                android:layout_height="35dp"
+                                android:text="Single"
+                                android:id="@+id/sinle"
+                                android:checked="true"
+                                android:buttonTint="@color/black"
+                                >
+
+                            </RadioButton>
+                            <RadioButton
+                                android:layout_width="110dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="5dp"
+                                android:text="Commited"
+                                android:id="@+id/commited"
+                                android:buttonTint="@color/black"
+                                >
+
+                            </RadioButton>
+                            <RadioButton
+                                android:layout_width="90dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="5dp"
+                                android:text="Married"
+                                android:id="@+id/married"
+                                android:buttonTint="@color/black">
+
+                            </RadioButton>
+
+                        </RadioGroup>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp"
+                        android:layout_below="@+id/domer"
+                        android:id="@+id/publiccd"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp">
+
+                        <RadioGroup
+                            android:id="@+id/radpri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/domer"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Privacy"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="15dp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:layout_marginRight="10dp"></TextView>
+                            <RadioButton
+                                android:id="@+id/pulic"
+                                android:layout_width="110dp"
+                                android:layout_height="35dp"
+                                android:buttonTint="@color/black"
+                                android:checked="true"
+                                android:text="Public"
+                                android:textSize="15dp">
+
+                            </RadioButton>
+                            <RadioButton
+                                android:layout_width="110dp"
+                                android:layout_height="35dp"
+                                android:text="Private"
+                                android:id="@+id/priate"
+                                android:buttonTint="@color/black"
+                                android:layout_marginLeft="5dp">
+                            </RadioButton>
+                        </RadioGroup>
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:id="@+id/heitcd"
+                android:layout_below="@+id/hosc"
+                android:layout_marginTop="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="Height (cms):"
+
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="10dp"></TextView>
+
+
+                    <Spinner
+                        android:id="@+id/height"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="-7dp"
+                        android:layout_marginTop="-4dp"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:id="@+id/weitcd"
+                android:layout_below="@+id/heitcd"
+                android:layout_marginTop="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:text="Weight (kgs):"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="10dp"></TextView>
+
+
+                    <Spinner
+                        android:id="@+id/weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="-7dp"
+                        android:layout_marginTop="-4dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:id="@+id/passcd"
+                android:layout_below="@+id/weitcd"
+                android:layout_marginTop="5dp">
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:singleLine="true"
+                    android:hint="Password"
+                    android:paddingLeft="5dp"
+                    android:textSize="15dp"
+                    android:inputType="textPassword">
+
+                </EditText>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/passcd"
+                android:layout_marginTop="5dp"
+                android:id="@+id/repasscd">
+                <EditText
+                    android:id="@+id/repassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:paddingLeft="5dp"
+                    android:hint="Re password"
+                    android:textSize="15dp"
+                    android:singleLine="true"
+                    android:inputType="textPassword">
+
+                </EditText>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/regcd"
+                android:layout_below="@+id/repasscd">
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:background="#C3C3C3"
+                    android:text="Create"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp">
+
+                </Button>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/ald"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/regcd"
+                android:layout_marginTop="20dp"
+                android:text="Already have Account"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/logn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ald"
+                android:layout_marginTop="15dp"
+                android:text="Login"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp">
+
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/starecy"
+                android:visibility="invisible"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+</RelativeLayout>

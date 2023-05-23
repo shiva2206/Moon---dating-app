@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/cardview_dark_background"
+    android:layout_gravity="center"
+    android:padding="10dp"
+    android:id="@+id/cddd"
+    app:cardCornerRadius="30dp"
+    android:layout_marginTop="10dp"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center">
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="355dp"
+            android:id="@+id/cf"
+            android:backgroundTint="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="30dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+
+                android:backgroundTint="@color/red"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+
+                android:id="@+id/cd"
+                app:cardCornerRadius="30dp"
+                >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:id="@+id/relout"
+                    android:padding="5dp"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="50dp"
+                        android:visibility="invisible"
+                        android:id="@+id/remcd"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginRight="17dp">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/closee"
+                            android:id="@+id/remove"
+                            android:padding="3dp">
+
+                        </ImageView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="#03A9F4"
+                            android:id="@+id/bltk"
+                            android:visibility="gone">
+
+                        </ImageView>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/anno"
+                        android:layout_centerHorizontal="true"
+                        android:backgroundTint="@color/black"
+                        app:cardCornerRadius="90dp"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/bcvpa"
+                            android:layout_width="185dp"
+                            android:layout_height="185dp"
+                            android:layout_gravity="center"
+                           >
+
+                        </de.hdodenhof.circleimageview.CircleImageView>
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/vpa"
+                            android:layout_width="175dp"
+                            android:layout_height="175dp"
+                           android:layout_gravity="center">
+
+                        </de.hdodenhof.circleimageview.CircleImageView>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/anno">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/liked"
+                            android:id="@+id/cru"
+                            android:visibility="gone"
+                            >
+
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/admirer"
+                            android:id="@+id/adm"
+                            android:visibility="gone"
+                            android:layout_toRightOf="@+id/cru">
+
+                        </ImageView>
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/fri"
+                            android:visibility="gone"
+                            android:src="@drawable/friend"
+                            android:layout_toRightOf="@+id/adm">
+
+                        </ImageView>
+
+                    </RelativeLayout>
+                    <!--            <com.smarteist.autoimageslider.SliderView-->
+                    <!--                android:layout_width="match_parent"-->
+                    <!--                android:layout_height="300dp"-->
+                    <!--                android:id="@+id/swipe"-->
+                    <!--                app:sliderScrollTimeInSec="2"-->
+                    <!--                app:sliderStartAutoCycle="true"-->
+                    <!--                app:sliderAutoCycleDirection="right"-->
+                    <!--                app:sliderIndicatorPadding="10dp"-->
+                    <!--                app:sliderIndicatorRadius="2dp"-->
+                    <!--                app:sliderIndicatorSelectedColor="@color/white"-->
+                    <!--                app:sliderIndicatorUnselectedColor="@color/black"-->
+                    <!--                app:sliderIndicatorGravity="center_horizontal|bottom"-->
+                    <!--                app:sliderIndicatorOrientation="horizontal"-->
+                    <!--                app:sliderAnimationDuration="1000"-->
+                    <!--                >-->
+
+                    <!--            </com.smarteist.autoimageslider.SliderView>-->
+
+
+                    <TextView
+                        android:id="@+id/hnae"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_above="@+id/dists"
+                        android:background="@color/black"
+                        android:textColor="@color/white"
+                        android:textSize="19dp"
+                        android:singleLine="true"
+                        android:textStyle="bold">
+
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:textSize="15dp"
+                        android:id="@+id/stats"
+                        android:layout_below="@+id/hnae"
+                        android:textColor="@color/white">
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/dists"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_above="@+id/ss"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/hnae"
+                        android:background="@color/black"
+
+                        android:textColor="@color/white"
+                        android:textSize="16dp">
+
+                    </TextView>
+
+
+
+                    <TextView
+                        android:id="@+id/ag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_above="@+id/dists"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/hnae"
+                        android:background="@color/black"
+                        android:layout_marginBottom="-4dp"
+                        android:textColor="@color/white"
+                        android:textSize="16dp">
+
+                    </TextView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ss"
+                        app:cardCornerRadius="30dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_alignParentBottom="true"
+                        android:backgroundTint="@color/grey">
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+
+
+                            android:textSize="18dp"
+                            android:id="@+id/buts"
+                            android:background="@color/grey"
+                            >
+
+                        </Button>
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

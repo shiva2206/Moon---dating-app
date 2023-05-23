@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Save"
+        android:id="@+id/saev"
+        android:iconTint="@color/black">
+
+    </item>
+    <item android:title="Delete For Everyone"
+        android:id="@+id/dell"
+        android:iconTint="@color/black">
+
+    </item>
+
+    <item android:title="Delete For Me"
+        android:id="@+id/delforme"
+        android:iconTint="@color/black">
+
+    </item>
+    <item
+        android:title="Seen Info"
+        android:id="@+id/seninf"
+        android:iconTint="@color/black">
+
+    </item>
+
+</menu>

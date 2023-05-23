@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".comments"
+
+    >
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:id="@+id/srl"
+        android:layout_above="@+id/www"
+        android:padding="4dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rt"
+                    android:background="@color/red"
+                    android:padding="5dp"
+                    android:elevation="100dp"
+                    >
+
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fl"
+                        android:backgroundTint="@color/black"
+                        app:cardCornerRadius="30dp">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:backgroundTint="@color/black"
+                            android:id="@+id/cie"
+                            app:cardCornerRadius="100dp"
+                            android:layout_margin="5dp">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/cardview"
+
+                                android:layout_gravity="center">
+
+                            </de.hdodenhof.circleimageview.CircleImageView>
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/pr"
+                                android:src="@mipmap/blackypic"
+                                android:layout_gravity="center"
+                                android:padding="5dp">
+
+                            </de.hdodenhof.circleimageview.CircleImageView>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/cie"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="70dp"
+                            android:textColor="@color/white"
+                            android:id="@+id/descri"
+                            android:textSize="16dp"
+                            android:textStyle="bold">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/descri"
+                            android:layout_toRightOf="@+id/cie"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginTop="3dp"
+                            android:textColor="@color/white"
+                            android:id="@+id/tm">
+
+                        </TextView>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="----Comments----"
+                    android:layout_below="@+id/rt"
+                    android:textAlignment="center"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:id="@+id/d">
+
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rec"
+                    android:layout_below="@+id/d"
+                    android:layoutAnimation="@anim/layout_fall_down"
+                    android:layout_marginBottom="5dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="No Comments To Show"
+        android:id="@+id/nn"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/www"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red"
+        android:padding="5dp"
+        android:elevation="100dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="30dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:padding="5dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/curprod"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/blackypic"
+                    android:layout_marginLeft="5dp">
+
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <ImageView
+                    android:id="@+id/sendcomm"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/sendwhite">
+
+                </ImageView>
+                <com.hendraanggrian.appcompat.widget.SocialEditText
+                    android:id="@+id/commentedt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/sendcomm"
+                    android:layout_toRightOf="@+id/curprod"
+                    android:textColor="@color/white"
+
+                    android:hint="Comment"
+                    android:textColorHint="@color/white">
+
+                </com.hendraanggrian.appcompat.widget.SocialEditText>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

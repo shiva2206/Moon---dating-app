@@ -1,0 +1,150 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/red"
+    tools:context="fragment.flames">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/funcd"
+            app:cardCornerRadius="30dp"
+            android:layout_margin="5dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:text="F L A M E S"
+                android:textAlignment="center"
+                android:textSize="14dp">
+
+            </Button>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/flacdd"
+            android:layout_below="@+id/funcd"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/maroon">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Name 1 :"
+                    android:textSize="20dp">
+
+                </TextView>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nameone"
+                    android:textSize="19dp"
+                    android:inputType="textPersonName"
+                    android:singleLine="true">
+
+                </EditText>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Name 2 :"
+                    android:textSize="20dp">
+
+                </TextView>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nametwo"
+                    android:textSize="19dp"
+                    android:inputType="textPersonName"
+                    android:singleLine="true">
+
+                </EditText>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:text="       Flames       "
+                        android:id="@+id/flamm"
+                        >
+
+                    </Button>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:text="        Reset        "
+                        android:id="@+id/resse">
+
+                    </Button>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/flacdd"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:id="@+id/fntxt"
+                android:visibility="gone"
+                >
+
+            </TextView>
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:foregroundGravity="center"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/imggg"
+                android:src="@drawable/liked"
+                android:layout_centerVertical="true">
+
+            </ImageView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

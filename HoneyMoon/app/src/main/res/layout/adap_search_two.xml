@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cdgh"
+    android:backgroundTint="@color/black"
+    android:background="@color/black"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="30dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/anno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tme">
+
+            <ImageView
+                android:id="@+id/cru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/liked"
+                android:visibility="gone">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/adm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/cru"
+                android:src="@drawable/admirer"
+                android:visibility="gone">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/fri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/adm"
+                android:src="@drawable/friend"
+                android:visibility="gone">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/df"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/black"
+                app:cardCornerRadius="100dp">
+                <ImageView
+                    android:id="@+id/backimag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                </ImageView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="100dp">
+                    <ImageView
+                        android:id="@+id/vpro"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/logo"
+                        android:scaleType="centerCrop"
+                        >
+
+                    </ImageView>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/vusme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/df"
+            android:textColor="@color/white"
+            android:textSize="16dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/vnme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vusme"
+            android:singleLine="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/df"
+            android:textColor="@color/white"
+            android:textSize="14dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:visibility="invisible">
+
+        </TextView>
+    </RelativeLayout>
+
+
+</LinearLayout>

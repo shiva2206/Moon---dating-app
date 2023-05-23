@@ -1,0 +1,353 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="fragment.nearby_frag"
+    android:background="@color/red">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/funcd"
+        app:cardCornerRadius="30dp"
+        android:layout_margin="5dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="Nearby"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:id="@+id/ner">
+
+        </Button>
+
+    </androidx.cardview.widget.CardView>z
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lkh"
+        android:layout_marginTop="50dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_below="@+id/funcd">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textColor="@color/red"
+            android:visibility="invisible">
+
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/scd"
+            android:backgroundTint="@color/black">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:id="@+id/nby"
+
+                android:layout_margin="5dp"
+                android:background="@color/black">
+
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/distsekbr"
+            android:progress="100"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/scd">
+
+        </SeekBar>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/distsekbr"
+            android:id="@+id/qwe">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/filter">
+
+
+                    <RadioGroup
+                        android:id="@+id/radsex"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/red">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender:"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center_vertical"></TextView>
+
+
+                        <RadioButton
+                            android:id="@+id/male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:background="#F6F6F6"
+                            android:paddingRight="10dp"
+                            android:buttonTint="@color/black"
+
+                            android:backgroundTint="@color/red"
+                            android:text="Male">
+
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#F6F6F6"
+                            android:backgroundTint="@color/red"
+                            android:buttonTint="@color/black"
+                            android:paddingRight="10dp"
+                            android:text="Female">
+
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/allrd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#F6F6F6"
+                            android:checked="true"
+                            android:backgroundTint="@color/red"
+                            android:buttonTint="@color/black"
+                            android:paddingRight="10dp"
+                            android:text="Show All"></RadioButton>
+
+
+
+
+
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/showcru"
+                        android:layout_below="@+id/radsex"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Status:"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/black"
+                            android:layout_gravity="center_vertical">
+
+                        </TextView>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:background="#F6F6F6"
+                            android:text="Single"
+                            android:id="@+id/sinle"
+                            android:paddingRight="10dp"
+                            android:backgroundTint="@color/red"
+                            android:buttonTint="@color/black"
+                            >
+
+                        </RadioButton>
+                        <RadioButton
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:background="#F6F6F6"
+                            android:text="Commited"
+                            android:id="@+id/commited"
+                            android:paddingRight="10dp"
+                            android:backgroundTint="@color/red"
+                            android:buttonTint="@color/black"
+                            >
+
+                        </RadioButton>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="10dp"
+                            android:background="#F6F6F6"
+                            android:text="Married"
+                            android:backgroundTint="@color/red"
+                            android:id="@+id/married"
+                            android:buttonTint="@color/black">
+
+                        </RadioButton>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:background="#F6F6F6"
+                            android:paddingRight="10dp"
+                            android:text="All"
+                            android:backgroundTint="@color/red"
+                            android:id="@+id/sallr"
+                            android:buttonTint="@color/black">
+
+                        </RadioButton>
+
+
+                    </RadioGroup>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show Age From :"
+                        android:id="@+id/txtagf"
+                        android:layout_below="@+id/showcru"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp">
+
+                    </TextView>
+                    <EditText
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sagf"
+                        android:text=""
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:layout_toRightOf="@+id/txtagf"
+                        android:layout_below="@+id/showcru">
+
+                    </EditText>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show  Age  To :"
+                        android:layout_below="@+id/showcru"
+                        android:id="@+id/txtsgt"
+                        android:layout_toRightOf="@+id/sagf"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp">
+
+                    </TextView>
+                    <EditText
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/showcru"
+                        android:id="@+id/sagt"
+                        android:text=""
+                        android:singleLine="true"
+                        android:inputType="number"
+                        android:layout_toRightOf="@+id/txtsgt">
+
+                    </EditText>
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </HorizontalScrollView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="40dp"
+            android:id="@+id/regcd"
+            android:layout_below="@+id/qwe">
+            <Button
+                android:id="@+id/ser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#C3C3C3"
+                android:text="Search"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:padding="5dp">
+
+            </Button>
+
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lop"
+        android:layout_below="@+id/lkh">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/nn"
+            android:textSize="20dp"
+            android:visibility="gone">
+
+        </TextView>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/funcd">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/distxt">
+
+        </TextView>
+        <TextView
+            android:id="@+id/imgitxt"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textColor="@color/red"
+            android:visibility="invisible">
+
+        </TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:visibility="invisible"
+            android:id="@+id/serrecy"
+            android:layout_marginTop="-50dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_centerHorizontal="true"
+            android:text="Fill the below criteria and click Search">
+
+        </TextView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

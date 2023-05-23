@@ -1,0 +1,196 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="fragment.profile"
+    android:background="@color/red"
+    android:orientation="vertical"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/annocrush"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/liked"
+            android:visibility="gone">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/annoadmirer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/annocrush"
+            android:src="@drawable/admirer"
+            android:visibility="gone">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/annofri"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/annoadmirer"
+            android:src="@drawable/friend"
+            android:visibility="gone">
+
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/prof"
+                    android:layout_width="140dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profile">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/info"
+                    android:layout_toRightOf="@+id/prof"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/red"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/usrname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+
+                        android:fontFamily="@font/oleo_script_swash_caps_bold"
+                        android:text="username"
+                        android:textAlignment="center"
+
+                        android:textSize="23dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/msx"
+                    android:layout_width="170dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/info"
+                    android:layout_alignLeft="@+id/info"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black"
+                    android:text="MESSAGE"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/edits"
+                    android:layout_width="170dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/info"
+                    android:layout_alignLeft="@+id/info"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black"
+                    android:text="EDIT PROFILE"
+                    android:textColor="@color/white"
+                    android:visibility="invisible">
+
+                </TextView>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/chatmes"
+                    android:layout_marginTop="60dp"
+                    android:id="@+id/enu"
+                    android:layout_toRightOf="@+id/msx">
+                </androidx.appcompat.widget.Toolbar>
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/msx"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignLeft="@+id/info"
+                    android:background="@color/black"
+                    android:text="Following"
+                    android:id="@+id/fol"
+                    android:textColor="@color/white">
+
+                </TextView>
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/msx"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignLeft="@+id/edits"
+                    android:background="@color/black"
+                    android:text="Saved"
+                    android:id="@+id/saved"
+                    android:textColor="@color/white"
+                    android:visibility="invisible">
+
+                </TextView>
+
+
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:foregroundGravity="center"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

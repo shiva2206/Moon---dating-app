@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".nearby"
+    android:background="@color/red">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:layout_margin="10dp"
+        android:id="@+id/scd"
+        android:backgroundTint="@color/black">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NEARBY"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:id="@+id/nby"
+
+            android:layout_margin="5dp"
+            android:background="@color/black">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scd">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="None"
+            android:id="@+id/nn"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:textSize="20dp">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Swipe Left or Right"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_marginTop="-4dp"
+            android:id="@+id/slr">
+
+        </TextView>
+        <com.lorentzos.flingswipe.SwipeFlingAdapterView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/slr"
+            android:id="@+id/uswipe"
+            android:layout_marginBottom="3dp">
+
+        </com.lorentzos.flingswipe.SwipeFlingAdapterView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

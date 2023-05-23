@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Add as Crush"
+        android:id="@+id/crus"
+        android:onClick="crush"
+        >
+
+    </item>
+    <item
+        android:title="Add as Gf"
+        android:id="@+id/gf"
+        >
+
+    </item>
+
+
+</menu>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relllls"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    app:cardCornerRadius="30dp"
+    android:layout_margin="5dp"
+    android:backgroundTint="#000000">
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:id="@+id/ttme"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/black"
+            android:text="12-May-2020 12:00:00"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:layout_marginBottom="5dp">
+
+        </TextView>
+
+
+        <ImageView
+            android:id="@+id/ig"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@color/black"
+            android:foregroundGravity="center"
+            android:src="@drawable/add"
+            android:layout_below="@+id/ttme">
+
+        </ImageView>
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"
+            android:foregroundGravity="center"
+            android:id="@+id/iv"
+            android:visibility="gone">
+
+        </VideoView>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:src="@color/red"
+            android:id="@+id/chek"
+            android:layout_alignParentTop="true"
+            android:visibility="gone">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:src="@color/grey"
+            android:id="@+id/alreadypre"
+            android:layout_alignParentTop="true"
+            android:visibility="gone">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="4dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        android:backgroundTint="@color/black"
+        android:padding="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/cls"
+                android:padding="5dp"
+                android:layout_marginLeft="4dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/close">
+
+            </ImageView>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/tgpro"
+                android:layout_toRightOf="@+id/cls"
+                android:padding="7dp">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+            <com.hendraanggrian.appcompat.widget.SocialTextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/sstv"
+                android:singleLine="true"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/tgpro"
+                android:textColor="@color/white"
+                android:textSize="17dp">
+            </com.hendraanggrian.appcompat.widget.SocialTextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tgpro"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                android:singleLine="true"
+                android:layout_marginLeft="4dp"
+                android:layout_below="@+id/sstv"
+                android:id="@+id/tgnme">
+
+            </TextView>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

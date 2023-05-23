@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.honeymoon"
+    android:screenOrientation="portrait">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        //android:maxSdkVersion="31"
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light">
+<!--        <activity-->
+<!--            android:name=".jitsiaudvidcall"-->
+<!--            android:exported="false" />-->
+
+        <service android:name="NotificationPack.MyFirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="NotificationPack.CustomMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="argear.ui.PlayerActivity"
+            android:exported="false" />
+        <activity
+            android:name="argear.ui.ImageViewerActivity"
+            android:exported="false" />
+        <activity
+            android:name="argear.ui.CameraActivity"
+            android:exported="false" />
+        <activity android:name=".facebooklogin"
+            android:exported="false"/>
+        <activity android:name=".encrption"
+            android:exported="false"/>
+        <activity android:name=".viewchatmedia"
+            android:exported="false"/>
+        <activity android:name=".nearby"
+            android:exported="false"/>
+        <activity android:name=".settings"
+            android:exported="false"/>
+        <activity android:name=".mutualfoll"
+            android:exported="false"/>
+        <activity android:name=".blockedconts"
+            android:exported="false"/>
+
+        <service
+            android:name="model.MyService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9694169298661099~6980277796" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <activity android:name=".matches"
+            android:exported="false"/>
+        <activity
+            android:name=".seen"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".login_two"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".posttags"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".attach"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".addhighlight"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".call"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".allstories"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".view"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".addstory"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".details"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".story_see"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".chats"
+            android:screenOrientation="portrait"
+            android:exported="false">
+            <intent-filter>
+                <action android:name=".chats" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".likes"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".editprof"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".saved"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".friend"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".admirers"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".crushs"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".followers"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".following"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".comments"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".postact"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".forgot"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".create"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".Mainactivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".login"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:exported="false"/>
+        <activity
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorStickerActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.NoActionBar" />
+        <activity
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorTextActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorCropActivity"
+            android:screenOrientation="portrait"
+
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:exported="false"/>
+        <activity
+            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorDrawActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:exported="false"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

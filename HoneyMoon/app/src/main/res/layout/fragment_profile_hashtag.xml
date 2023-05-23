@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="fragment.profile_hashtag"
+    android:background="@color/red"
+    android:padding="20dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/hashpro"
+        android:src="@mipmap/hshtg">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hahnme"
+        android:layout_toRightOf="@+id/hashpro"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:text="#sfsf"
+        android:fontFamily="@font/oleo_script_swash_caps_bold"
+        android:textSize="20dp">
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ttpst"
+        android:layout_toRightOf="@+id/hashpro"
+        android:layout_below="@+id/hahnme"
+        android:textColor="@color/black"
+        android:layout_marginTop="4dp"
+        android:text="123 posts"
+        android:layout_marginLeft="10dp">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recy"
+        android:layout_below="@+id/hashpro"
+        android:layout_marginTop="10dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>
