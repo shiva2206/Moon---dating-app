@@ -81,7 +81,7 @@
 
                     </de.hdodenhof.circleimageview.CircleImageView>
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/prof"
+                        android:id="@+id/cfg"
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"

@@ -124,7 +124,7 @@
                     android:background="@color/black"></de.hdodenhof.circleimageview.CircleImageView>
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/prof"
+                    android:id="@+id/cfg"
                     android:layout_width="110dp"
                     android:layout_height="110dp"
                     android:layout_centerInParent="true"

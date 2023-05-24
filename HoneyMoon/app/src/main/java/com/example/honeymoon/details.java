@@ -73,7 +73,7 @@ public class details extends AppCompatActivity {
         lstfrag=new ArrayList<>();
         lstttl=new ArrayList<>();
 
-        profile=findViewById(R.id.prof);
+        profile=findViewById(R.id.cfg);
         bcmi=findViewById(R.id.bcim);
         usernme=findViewById(R.id.deusrnme);
         stats=findViewById(R.id.destats);

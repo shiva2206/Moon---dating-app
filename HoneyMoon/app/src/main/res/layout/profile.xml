@@ -68,7 +68,7 @@
                 android:layout_gravity="center">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/prof"
+                    android:id="@+id/cfg"
                     android:layout_width="140dp"
                     android:layout_height="130dp"
                     android:layout_gravity="center"
@@ -82,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/info"
-                    android:layout_toRightOf="@+id/prof"
+                    android:layout_toRightOf="@+id/cfg"
                     android:layout_marginTop="20dp"
                     android:background="@color/red"
                     android:layout_marginLeft="20dp">

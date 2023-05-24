@@ -15,8 +15,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityOptionsCompat;
-import androidx.core.view.ViewCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -40,7 +38,7 @@ public class login_two extends AppCompatActivity {
     private Button login;
     private ImageView prof;
     private TextView usernme,hnytxt;
-    private ImageView close;
+    private Button close;
     private FirebaseAuth auth;
     private NetworkChangeListener networkChangeListener = new NetworkChangeListener();
     @Override
@@ -54,7 +52,7 @@ public class login_two extends AppCompatActivity {
         setContentView(R.layout.activity_login_two);
 
         login=findViewById(R.id.log_in);
-        prof=findViewById(R.id.prof);
+        prof=findViewById(R.id.cfg);
         hnytxt=findViewById(R.id.honeytext);
         usernme=findViewById(R.id.usernmw);
         close=findViewById(R.id.close);
@@ -135,8 +133,10 @@ public class login_two extends AppCompatActivity {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-                ActivityOptionsCompat options  = ActivityOptionsCompat.makeSceneTransitionAnimation(login_two.this,hnytxt, ViewCompat.getTransitionName(hnytxt));
-                startActivity(intr,options.toBundle());
+                //Transistion name for honey text
+//                ActivityOptionsCompat options  = ActivityOptionsCompat.makeSceneTransitionAnimation(login_two.this,hnytxt, ViewCompat.getTransitionName(hnytxt));
+//                startActivity(intr,options.toBundle());
+                startActivity(intr);
             }
         });
 

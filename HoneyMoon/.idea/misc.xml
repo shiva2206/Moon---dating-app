@@ -15,18 +15,21 @@
         <entry key="..\:/HoneyMoon/app/src/main/res/drawable/solidrect.xml" value="0.2775" />
         <entry key="..\:/HoneyMoon/app/src/main/res/drawable/sty_login_two.xml" value="0.2775" />
         <entry key="..\:/HoneyMoon/app/src/main/res/drawable/wave.xml" value="0.2235" />
+        <entry key="..\:/HoneyMoon/app/src/main/res/layout/activity_addhighlight.xml" value="0.22916666666666666" />
         <entry key="..\:/HoneyMoon/app/src/main/res/layout/activity_comments.xml" value="0.27291666666666664" />
         <entry key="..\:/HoneyMoon/app/src/main/res/layout/activity_create.xml" value="0.33" />
         <entry key="..\:/HoneyMoon/app/src/main/res/layout/activity_editprof.xml" value="0.27291666666666664" />
         <entry key="..\:/HoneyMoon/app/src/main/res/layout/activity_login.xml" value="0.2078804347826087" />
         <entry key="..\:/HoneyMoon/app/src/main/res/layout/activity_login_two.xml" value="0.27291666666666664" />
-        <entry key="..\:/HoneyMoon/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/HoneyMoon/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/HoneyMoon/app/src/main/res/layout/activity_story_see.xml" value="0.1" />
         <entry key="..\:/HoneyMoon/app/src/main/res/layout/adap_storysee.xml" value="0.26766304347826086" />
+        <entry key="..\:/HoneyMoon/app/src/main/res/layout/fragment_profile.xml" value="0.22916666666666666" />
         <entry key="..\:/HoneyMoon/app/src/main/res/layout/fragment_story_see.xml" value="0.253125" />
         <entry key="..\:/HoneyMoon/app/src/main/res/layout/sty_create.xml" value="0.22916666666666666" />
-        <entry key="..\:/HoneyMoon/app/src/main/res/layout/sty_login.xml" value="0.22" />
+        <entry key="..\:/HoneyMoon/app/src/main/res/layout/sty_login.xml" value="0.25" />
         <entry key="..\:/HoneyMoon/app/src/main/res/layout/sty_login_two.xml" value="0.25" />
+        <entry key="..\:/HoneyMoon/app/src/main/res/layout/sty_profile.xml" value="0.22916666666666666" />
         <entry key="..\:/HoneyMoon/app/src/main/res/layout/uxde.xml" value="0.33" />
         <entry key="..\:/HoneyMoon/app/src/main/res/menu/login.xml" value="0.25885416666666666" />
         <entry key="..\:/Users/HP/HoneyMoon/app/src/main/res/drawable/background_cloru.xml" value="0.157" />
@@ -159,6 +162,11 @@
         <entry key="..\:/Users/HP/HoneyMoon/app/src/main/res/xml/anime_one.xml" value="0.1675213675213675" />
         <entry key="..\:/shiva/HoneyMoon/app/src/main/res/layout/activity_create.xml" value="0.22146739130434784" />
         <entry key="..\:/shiva/HoneyMoon/app/src/main/res/layout/activity_jitsiaudvidcall.xml" value="0.15760869565217392" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/activity_login_two.xml" value="0.27291666666666664" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/sty_create.xml" value="0.27291666666666664" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/sty_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/sty_login_two.xml" value="0.19202898550724637" />
       </map>
     </option>
   </component>
