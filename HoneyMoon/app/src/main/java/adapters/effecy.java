@@ -719,6 +719,7 @@ public class effecy {
                     seenornot();
                 } else if (snapshot.child("users").child(userid).child("mode").getValue().equals("private")) {
                     bcimg.setBackgroundColor(Color.parseColor("#000000"));
+                    bcimg.setBackgroundResource(R.drawable.blacksolidcircle);
                 }
             }
 
@@ -740,11 +741,13 @@ public class effecy {
                         stalst.add(sta);
                     }
                     bcimg.setTag("yes");
+                    bcimg.setBackgroundResource(R.drawable.blacksolidcircle);
                     getsen();
 
                 } else {
                     bcimg.setTag("no");
-                    bcimg.setBackgroundColor(Color.parseColor("#000000"));
+//                    bcimg.setBackgroundColor(Color.parseColor("#000000"));
+                    bcimg.setBackgroundResource(R.drawable.pinksolidcircle);
                 }
             }
 

@@ -22,7 +22,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.honeymoon.Mainactivity;
@@ -94,9 +93,9 @@ public class searchadp extends RecyclerView.Adapter<searchadp.viewholder> {
     public void onBindViewHolder(@NonNull viewholder holder, int position) {
 
         if((what.equals("followers") || what.equals("crushs") || what.equals("gfs") || what.equals("admirers") || what.equals("bfs")) && userid.equals(FirebaseAuth.getInstance().getCurrentUser().getUid()) ){
-            holder.remcd.setVisibility(View.VISIBLE);
+            holder.remove.setVisibility(View.VISIBLE);
         }else{
-            holder.remcd.setVisibility(View.INVISIBLE);
+            holder.remove.setVisibility(View.INVISIBLE);
         }
 
         usermodel uel = allusers.get(position);
@@ -135,9 +134,9 @@ public class searchadp extends RecyclerView.Adapter<searchadp.viewholder> {
             }
         }
         if(uel.getUserid().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())){
-            holder.follcd.setVisibility(View.INVISIBLE);
+            holder.foll.setVisibility(View.INVISIBLE);
         }else{
-            holder.follcd.setVisibility(View.VISIBLE);
+            holder.foll.setVisibility(View.VISIBLE);
         }
 
         if(uel.getBluetick().equals("true")){
@@ -537,8 +536,8 @@ public class searchadp extends RecyclerView.Adapter<searchadp.viewholder> {
         private ImageView annocru,annofri,annoadm,prof,bcimg,remove,bltk;
         private TextView usrnme,age,stats;
         private Button foll;
-        private RelativeLayout relout;
-        private CardView follcd,remcd,cddd;
+        private RelativeLayout cddd;
+
 
         public viewholder(@NonNull View itemView) {
             super(itemView);
@@ -548,16 +547,16 @@ public class searchadp extends RecyclerView.Adapter<searchadp.viewholder> {
             age=itemView.findViewById(R.id.ag);
             stats=itemView.findViewById(R.id.stats);
             foll=itemView.findViewById(R.id.buts);
-            follcd=itemView.findViewById(R.id.ss);
+
             bcimg=itemView.findViewById(R.id.bcvpa);
-            remcd=itemView.findViewById(R.id.remcd);
+
             annocru = itemView.findViewById(R.id.cru);
             annofri=itemView.findViewById(R.id.fri);
             annoadm=itemView.findViewById(R.id.adm);
             remove=itemView.findViewById(R.id.remove);
-            relout=itemView.findViewById(R.id.relout);
-            bltk=itemView.findViewById(R.id.bltk);
             cddd=itemView.findViewById(R.id.cddd);
+            bltk=itemView.findViewById(R.id.bltk);
+
         }
 
     }

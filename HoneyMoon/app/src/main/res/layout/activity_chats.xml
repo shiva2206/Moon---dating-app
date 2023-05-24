@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/red"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".chats"
 
@@ -58,121 +58,106 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:id="@+id/msgl"
-        android:layout_margin="5dp"
-        android:background="@color/red">
 
-        <androidx.cardview.widget.CardView
+        android:layout_margin="5dp"
+        android:background="@drawable/solidrect">
+
+
+
+
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/closee"
+                    android:padding="4dp"
+                    android:id="@+id/rclo"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true">
+
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rtname"
+                    android:singleLine="true"
+                    android:textStyle="bold|italic"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rtcht"
+                    android:text=""
+                    android:layout_below="@+id/rtname">
+
+                </TextView>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/rtimg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/rtname">
+
+                </ImageView>
+                <VideoView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/rtvid"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/rtname">
+
+                </VideoView>
+
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            app:cardCornerRadius="30dp"
-            android:backgroundTint="@color/black">
-            <RelativeLayout
+            android:padding="10dp"
+            android:layout_below="@+id/rt">
+
+            <EditText
+                android:id="@+id/chatmes"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    app:cardCornerRadius="30dp"
-                    android:id="@+id/rt"
-                    android:visibility="gone">
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:background="@color/grey">
-                        <ImageView
-                            android:layout_width="27dp"
-                            android:layout_height="27dp"
-                            android:src="@drawable/closee"
-                            android:padding="4dp"
-                            android:id="@+id/rclo"
-                            android:layout_alignParentRight="true"
-                            android:layout_alignParentTop="true">
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/chasend"
+                android:hint="message"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="17dp">
 
-                        </ImageView>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/rtname"
-                            android:singleLine="true"
-                            android:textStyle="bold|italic"
-                            >
+            </EditText>
+            <ImageView
+                android:layout_width="27dp"
+                android:id="@+id/chasend"
+                android:layout_height="27dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/sendwhite"
+                android:layout_toLeftOf="@+id/attach">
 
-                        </TextView>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/rtcht"
-                            android:text=""
-                            android:layout_below="@+id/rtname">
-
-                        </TextView>
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:id="@+id/rtimg"
-                            android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/rtname">
-
-                        </ImageView>
-                        <VideoView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:id="@+id/rtvid"
-                            android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/rtname">
-
-                        </VideoView>
-
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_below="@+id/rt">
-
-                    <EditText
-                        android:id="@+id/chatmes"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_toLeftOf="@+id/chasend"
-                        android:hint="message"
-                        android:layout_centerVertical="true"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/white"
-                        android:textSize="17dp">
-
-                    </EditText>
-                    <ImageView
-                        android:layout_width="27dp"
-                        android:id="@+id/chasend"
-                        android:layout_height="27dp"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/sendwhite"
-                        android:layout_toLeftOf="@+id/attach">
-
-                    </ImageView>
+            </ImageView>
 
 
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="30dp"
-                        android:id="@+id/attach"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/attach"
-                        android:layout_alignParentEnd="true">
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:id="@+id/attach"
+                android:layout_centerVertical="true"
+                android:src="@drawable/attach"
+                android:layout_alignParentEnd="true">
 
-                    </ImageView>
-
-
-                </RelativeLayout>
-            </RelativeLayout>
+            </ImageView>
 
 
-        </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+
+
     </RelativeLayout>
 
 
