@@ -24,7 +24,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.view.ViewCompat;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -48,13 +47,13 @@ import utility.NetworkChangeListener;
 
 public class create extends AppCompatActivity {
     private EditText username,nme,emil,pass,repass;
-    private TextView login,dob,hnytxt;
+    private TextView login,dob,hnytxt,ald;
     private Button create;
     private String[] hlst,wlst;
     private Spinner heigt,weigt;
     private ArrayAdapter<String> headp,weadp;
     private statusadap sadp;
-    private RecyclerView recy;
+//    private RecyclerView recy;
     private List<usermodel> udelst;
     private ProgressDialog pd;
     private RadioGroup gendr,status,privacy;
@@ -77,6 +76,7 @@ public class create extends AppCompatActivity {
         nme=findViewById(R.id.name);
         emil=findViewById(R.id.email);
         pass=findViewById(R.id.password);
+
         repass=findViewById(R.id.repassword);
         create=findViewById(R.id.register);
         dob=findViewById(R.id.dob);
@@ -84,11 +84,12 @@ public class create extends AppCompatActivity {
         gendr=findViewById(R.id.radsex);
         status=findViewById(R.id.showcru);
         privacy=findViewById(R.id.radpri);
-        recy=findViewById(R.id.starecy);
+//        recy=findViewById(R.id.starecy);
 
         heigt= (Spinner) findViewById(R.id.height);
         weigt= (Spinner) findViewById(R.id.weight);
         login=findViewById(R.id.logn);
+        ald=findViewById(R.id.ald);
         auth=FirebaseAuth.getInstance();
         fbdr=FirebaseDatabase.getInstance().getReference();
         pd=new ProgressDialog(this);
@@ -118,7 +119,12 @@ public class create extends AppCompatActivity {
 //        recy.setAdapter(sadp);
 //        recy.setLayoutManager(new LinearLayoutManager(create.this));
 //        getusdel();
-
+        ald.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         dob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
