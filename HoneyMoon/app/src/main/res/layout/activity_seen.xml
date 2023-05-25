@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".seen"
-    android:background="@color/red"
+    android:background="@color/white"
    >
 
     <RelativeLayout
@@ -20,28 +20,23 @@
             android:layout_margin="10dp">
 
         </androidx.viewpager.widget.ViewPager>
-        <androidx.cardview.widget.CardView
+
+        <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_below="@+id/vpger"
-            android:background="@color/black"
-            app:cardCornerRadius="30dp"
-            android:id="@+id/cdf">
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@color/black"
-                android:textColor="@color/white"
-                android:id="@+id/noviews"
-                android:text="views 0">
+            android:background="@drawable/redwhitefilled"
+            android:textColor="@color/bgredy"
+            android:id="@+id/noviews"
+            android:text="views 0">
 
-            </Button>
+        </Button>
 
-        </androidx.cardview.widget.CardView>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/cdf">
+            android:layout_below="@+id/noviews">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/senrecy"
                 android:layout_width="match_parent"

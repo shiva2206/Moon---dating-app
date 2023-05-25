@@ -8,7 +8,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Build;
@@ -718,7 +717,7 @@ public class effecy {
                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).exists()) {
                     seenornot();
                 } else if (snapshot.child("users").child(userid).child("mode").getValue().equals("private")) {
-                    bcimg.setBackgroundColor(Color.parseColor("#000000"));
+//                    bcimg.setBackgroundColor(Color.parseColor("#000000"));
                     bcimg.setBackgroundResource(R.drawable.blacksolidcircle);
                 }
             }
@@ -773,14 +772,17 @@ public class effecy {
                     }
                     if (p != stalst.size()) {
                         bcimg.setTag("yes");
-                        bcimg.setBackgroundColor(Color.parseColor("#FF00DD"));
+//                        bcimg.setBackgroundColor(Color.parseColor("#FF00DD"));
+                        bcimg.setBackgroundResource(R.drawable.pinksolidcircle);
                     } else {
                         bcimg.setTag("yes");
-                        bcimg.setBackgroundColor(Color.parseColor("#B8B8B8"));
+//                        bcimg.setBackgroundColor(Color.parseColor("#B8B8B8"));
+                          bcimg.setBackgroundResource(R.drawable.greysolidcolor);
                     }
 
                 } else {
-                    bcimg.setBackgroundColor(Color.parseColor("#FF00DD"));
+//                    bcimg.setBackgroundColor(Color.parseColor("#FF00DD"));
+                    bcimg.setBackgroundResource(R.drawable.pinksolidcircle);
                 }
 
 

@@ -4,19 +4,14 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="7dp">
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-        android:id="@+id/cdmess"
-        app:cardCornerRadius="30dp">
 
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="13dp"
-            android:id="@+id/lllll">
+            android:id="@+id/lllll"
+            android:background="@drawable/solidrect">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -40,7 +35,7 @@
                     android:textColor="@color/white"
                     android:textSize="17dp"
                     android:textStyle="bold"
-                    android:layout_toLeftOf="@+id/cdnomess"
+
                     android:layout_marginRight="10dp">
                 </TextView>
 
@@ -73,6 +68,5 @@
 
         </RelativeLayout>
 
-    </androidx.cardview.widget.CardView>
 
 </FrameLayout>

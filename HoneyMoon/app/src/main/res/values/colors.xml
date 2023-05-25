@@ -9,10 +9,14 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FF0000</color>
     <color name="grey">#737272</color>
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="pink">#FF01D6</color>
     <color name="maroon">#DF0F00</color>
     <color name="bgredy">#F44336</color>
+    <color name="blueredy">#03A9F4</color>
+    <color name="greenredy">#00FF00</color>
+    <color name="greyredy">#B8B8B8</color>
 </resources>

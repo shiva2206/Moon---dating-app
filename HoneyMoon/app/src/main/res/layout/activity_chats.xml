@@ -66,25 +66,27 @@
 
 
 
-                <ImageView
-                    android:layout_width="27dp"
-                    android:layout_height="27dp"
-                    android:src="@drawable/closee"
-                    android:padding="4dp"
-                    android:id="@+id/rclo"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true">
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/closee"
+                android:padding="4dp"
+                android:visibility="invisible"
+                android:id="@+id/rclo"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true">
 
-                </ImageView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/rtname"
-                    android:singleLine="true"
-                    android:textStyle="bold|italic"
-                    >
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rtname"
 
-                </TextView>
+                android:singleLine="true"
+                android:textStyle="bold|italic"
+                >
+
+            </TextView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -97,6 +99,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:id="@+id/rtimg"
+                    android:visibility="gone"
                     android:layout_centerHorizontal="true"
                     android:layout_below="@+id/rtname">
 
@@ -117,7 +120,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:layout_below="@+id/rt">
+
+           >
 
             <EditText
                 android:id="@+id/chatmes"
@@ -125,6 +129,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@+id/chasend"
                 android:hint="message"
+                style="@style/NoUnderlineEditText"
                 android:layout_centerVertical="true"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"

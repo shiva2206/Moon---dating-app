@@ -36,14 +36,14 @@
         </ImageView>
 
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/bltk"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:src="#03A9F4"
-            android:visibility="gone">
+            android:background="@drawable/bluesolidcircle"
+            >
 
-        </ImageView>
+        </de.hdodenhof.circleimageview.CircleImageView>
 
         <RelativeLayout
             android:id="@+id/wq"
@@ -58,14 +58,16 @@
                 android:id="@+id/bcvpa"
                 android:layout_width="185dp"
                 android:layout_height="185dp"
+                android:background="@drawable/blacksolidcircle"
                 android:layout_gravity="center">
 
             </de.hdodenhof.circleimageview.CircleImageView>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/vpa"
-                android:layout_width="175dp"
-                android:layout_height="175dp"
+                android:layout_width="172dp"
+                android:layout_height="172dp"
+
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true">
 
@@ -134,7 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_below="@+id/wq"
-            android:background="@color/black"
+            android:background="@color/bgredy"
             android:singleLine="true"
             android:textColor="@color/white"
             android:textSize="19dp"
@@ -159,7 +161,7 @@
             android:layout_below="@+id/stats"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/hnae"
-            android:background="@color/black"
+
 
             android:textColor="@color/white"
             android:textSize="16dp">
@@ -174,7 +176,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="-4dp"
             android:layout_toRightOf="@id/hnae"
-            android:background="@color/black"
+
             android:textColor="@color/white"
             android:textSize="16dp">
 

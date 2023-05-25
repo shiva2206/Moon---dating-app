@@ -32,8 +32,8 @@
 
             </de.hdodenhof.circleimageview.CircleImageView>
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:src="@mipmap/logo"
                 android:id="@+id/pro"
                 android:layout_centerHorizontal="true"

@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="fragment.search"
     android:background="@color/white"
-    android:id="@+id/srl">
+    android:id="@+id/srl"
+    android:padding="10dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,51 +24,46 @@
 
         </TextView>
 
-        <RelativeLayout
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
+            android:id="@+id/abl"
 
-            android:layout_marginTop="3dp"
-            android:id="@+id/app"
+            android:background="@drawable/redwhitefilled2"
             >
-            <com.google.android.material.appbar.AppBarLayout
+            <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:background="@drawable/redwhitefilled"
-                >
-                <androidx.appcompat.widget.Toolbar
+                android:layout_margin="2dp">
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
-                    <LinearLayout
+                    android:layout_height="wrap_content">
+
+                    <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/ser"
+                        android:hint="Search"
+                        style="@style/NoUnderlineEditText"
+                        app:drawableStartCompat="@drawable/search"
+                        android:textColorHint="@color/grey"
+                        android:textSize="15dp"
+                        android:id="@+id/etx"
+                        android:singleLine="true"
 
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="22dp"
-                            app:drawableStartCompat="@drawable/search"
-                            android:layout_toRightOf="@+id/ser"
-                            android:hint="Search"
-                            android:textColorHint="@color/black"
-                            android:textSize="17dp"
-                            android:id="@+id/etx"
-                            android:singleLine="true"
-                            android:textColor="@color/black"
-                            android:background="@color/white">
+                        >
 
-                        </EditText>
+                    </EditText>
 
-                    </LinearLayout>
+                </LinearLayout>
 
-                </androidx.appcompat.widget.Toolbar>
-            </com.google.android.material.appbar.AppBarLayout>
-        </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/app">
+            android:layout_below="@+id/abl">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

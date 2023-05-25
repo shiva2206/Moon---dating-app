@@ -23,15 +23,14 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:id="@+id/abl"
-
-            android:background="@drawable/redwhitefilled"
+            android:background="@drawable/redwhitefilled2"
             >
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                >
+                android:layout_margin="2dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -41,9 +40,10 @@
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/ser"
                         android:hint="Search"
+                        style="@style/NoUnderlineEditText"
                         app:drawableStartCompat="@drawable/search"
                         android:textColorHint="@color/grey"
-                        android:textSize="17dp"
+                        android:textSize="15dp"
                         android:id="@+id/etx"
                         android:singleLine="true"
 

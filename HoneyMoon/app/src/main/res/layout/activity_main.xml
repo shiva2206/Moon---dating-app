@@ -108,41 +108,39 @@
 
     </FrameLayout>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        app:cardCornerRadius="30dp"
-        android:background="@color/bgredy"
-        android:layout_below="@+id/scd"
-        >
-        <RelativeLayout
+
+    <RelativeLayout
             android:layout_width="200dp"
             android:layout_height="match_parent"
             android:id="@+id/lll"
+            android:background="@drawable/redwhitefilled2"
+            android:layout_below="@+id/scd"
+            android:layout_margin="2dp"
             android:visibility="gone"
-            android:background="@color/bgredy"
             >
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:paddingBottom="20dp">
+                android:layout_margin="10dp"
+
+                >
                 <com.google.android.material.navigation.NavigationView
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     app:menu="@menu/login"
                     android:layout_centerVertical="true"
-                    app:itemTextColor="@color/white"
-                    app:itemIconTint="@color/white"
+                    app:itemTextColor="@color/bgredy"
+                    app:itemIconTint="@color/red"
                     app:labelVisibilityMode="unlabeled"
                     android:id="@+id/navig"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:background="@color/bgredy">
+                    >
                 </com.google.android.material.navigation.NavigationView>
             </ScrollView>
 
 
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+
 </RelativeLayout>
