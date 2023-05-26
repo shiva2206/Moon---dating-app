@@ -17,6 +17,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -63,7 +64,7 @@ public class chats extends AppCompatActivity {
     private List<String> dalst,islastdatlst;
     private List<chatmodel> chtlst;
 //    private effecy cl;
-    private CardView repcd;
+    private RelativeLayout repcd;
     private RecyclerView recy;
     private chatmodel repdel;
     private NetworkChangeListener networkChangeListener = new NetworkChangeListener();

@@ -3,69 +3,60 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/red"
+    android:background="@color/white"
     android:layout_marginBottom="5dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-        android:id="@+id/cds"
-        android:layout_marginRight="50dp"
-        android:elevation="100dp"
-        android:visibility="gone"
-        app:cardCornerRadius="20dp">
-        <RelativeLayout
+
+    <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/secper">
-            <androidx.cardview.widget.CardView
+            android:id="@+id/cds"
+            android:background="@drawable/solidred2"
+            android:visibility="gone">
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="30dp"
+                android:padding="10dp"
                 android:id="@+id/rt"
-                android:visibility="gone">
-                <RelativeLayout
+                android:visibility="gone"
+                android:backgroundTint="@color/greyredy"
+                android:background="@drawable/solidrect">
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:background="@color/grey">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/rtname"
-                        android:textStyle="bold|italic"
-                        >
+                    android:id="@+id/rtname"
+                    android:textStyle="bold|italic"
+                    >
 
-                    </TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/rtcht"
-                        android:text=""
-                        android:layout_below="@+id/rtname">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rtcht"
+                    android:text=""
+                    android:layout_below="@+id/rtname">
 
-                    </TextView>
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:id="@+id/rtimg"
-                        android:visibility="gone"
-                        android:layout_below="@+id/rtname">
+                </TextView>
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/rtimg"
+                    android:visibility="gone"
+                    android:layout_below="@+id/rtname">
 
-                    </ImageView>
-                    <VideoView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:id="@+id/rtvid"
-                        android:visibility="gone"
-                        android:layout_below="@+id/rtname">
+                </ImageView>
+                <VideoView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/rtvid"
+                    android:visibility="gone"
+                    android:layout_below="@+id/rtname">
 
-                    </VideoView>
+                </VideoView>
 
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,7 +67,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@mipmap/blackypic"
+                    android:src="@drawable/blacksolidcircle"
                     android:id="@+id/chatpro"
                     android:visibility="gone">
 
@@ -85,12 +76,13 @@
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/chatusernme"
+
                     android:layout_toRightOf="@+id/chatpro"
                     android:id="@+id/lkj">
                     <ImageView
                         android:layout_width="200dp"
                         android:layout_height="200dp"
+                        android:layout_marginTop="5dp"
                         android:src="@mipmap/blackypic"
                         android:id="@+id/secimag">
 
@@ -153,157 +145,148 @@
 
 
 
-    </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
+
+
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cds"
         android:id="@+id/cdf"
-        app:cardCornerRadius="20dp"
-        android:backgroundTint="@color/black"
-        android:layout_alignParentRight="true"
-        android:elevation="100dp"
+        android:background="@drawable/solidred2"
         android:visibility="gone"
-        android:layout_marginLeft="50dp">
-
-        <RelativeLayout
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="50dp"
+        >
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/firper"
-            >
+            android:id="@+id/sen"
+            android:text="21-01-2022 15:30:00"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/white"
+            android:visibility="gone">
+        </TextView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="30dp"
+            android:backgroundTint="@color/greyredy"
+            android:id="@+id/ro"
+            android:visibility="gone"
+            android:background="@drawable/solidred2"
+            android:padding="10dp">
+
             <TextView
+                android:id="@+id/roname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/sen"
-                android:text="21-01-2022 15:30:00"
-                android:layout_marginTop="3dp"
-                android:layout_marginRight="7dp"
-                android:layout_marginLeft="4dp"
-                android:textColor="@color/white"
-                android:visibility="gone">
+                android:textStyle="bold|italic">
 
             </TextView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="30dp"
-                android:id="@+id/ro"
-                android:visibility="gone">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:background="@color/grey"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:id="@+id/roname"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold|italic">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/rocht"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/roname">
-
-                    </TextView>
-
-                    <ImageView
-                        android:id="@+id/roimg"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:visibility="gone"
-                        android:layout_below="@+id/roname">
-
-                    </ImageView>
-
-                    <VideoView
-                        android:id="@+id/rovid"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:visibility="gone"
-                        android:layout_below="@+id/roname">
-
-                    </VideoView>
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/jkl"
-                android:padding="10dp"
-                android:layout_below="@+id/ro">
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ghj">
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:id="@+id/firimag">
-
-                    </ImageView>
-                    <VideoView
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:id="@+id/firvido"
-                        android:visibility="gone">
-
-                    </VideoView>
-
-                </RelativeLayout>
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/fircht"
-                    android:textColor="@color/white"
-                    android:layout_below="@+id/ghj">
-
-                </TextView>
-
-
-            </RelativeLayout>
             <TextView
+                android:id="@+id/rocht"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/fitime"
-                android:textSize="8dp"
-                android:layout_below="@+id/jkl"
-                android:textColor="@color/white"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp">
+                android:layout_below="@+id/roname">
 
             </TextView>
+
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/liked"
-                android:layout_below="@+id/jkl"
-                android:id="@+id/firlik"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@+id/fitime"
-                android:visibility="gone">
+                android:id="@+id/roimg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:layout_below="@+id/roname">
 
             </ImageView>
 
+            <VideoView
+                android:id="@+id/rovid"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:layout_below="@+id/roname">
+
+            </VideoView>
 
         </RelativeLayout>
 
 
-    </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/jkl"
+            android:padding="10dp"
+            android:layout_below="@+id/ro">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ghj">
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/firimag">
+
+                </ImageView>
+                <VideoView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/firvido"
+                    android:visibility="gone">
+
+                </VideoView>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fircht"
+                android:textColor="@color/white"
+                android:layout_below="@+id/ghj">
+
+            </TextView>
+
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fitime"
+            android:textSize="8dp"
+            android:layout_below="@+id/jkl"
+            android:textColor="@color/white"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+        </TextView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/liked"
+            android:layout_below="@+id/jkl"
+            android:id="@+id/firlik"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/fitime"
+            android:visibility="gone">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

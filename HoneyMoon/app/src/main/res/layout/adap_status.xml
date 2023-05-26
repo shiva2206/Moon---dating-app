@@ -3,26 +3,15 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginTop="5dp"
-    android:layout_centerVertical="true"
-    android:layout_centerHorizontal="true">
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/red"
-        android:id="@+id/cdmess"
-        android:elevation="1000dp"
-        app:cardCornerRadius="30dp"
-        android:layout_margin="4dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height= "match_parent"
+    android:layout_margin="5dp"
 
-            android:id="@+id/rlllll"
-            android:background="@color/black"
-            android:elevation="100dp">
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/rlllll"
+
+    android:background="@drawable/redwhitefilled2">
+
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -60,28 +49,23 @@
                 </ImageView>
 
             </RelativeLayout>
-            <androidx.cardview.widget.CardView
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="100dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/black"
+
                 android:id="@+id/cardview"
                 >
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:id="@+id/backimag"
                     android:layout_gravity="center"
-                    android:background="@color/black">
+                    >
 
-                </ImageView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    app:cardCornerRadius="100dp"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/black">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
                     <!--                        <de.hdodenhof.circleimageview.CircleImageView-->
                     <!--                            android:id="@+id/frontcd"-->
                     <!--                            android:layout_width="match_parent"-->
@@ -92,17 +76,19 @@
 
                     <!--                        </de.hdodenhof.circleimageview.CircleImageView>-->
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@mipmap/logo"
                         android:id="@+id/fireus"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center"
                        >
 
                     </de.hdodenhof.circleimageview.CircleImageView>
-                </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -110,7 +96,7 @@
                 android:layout_toRightOf="@id/cardview"
                 android:layout_marginLeft="5dp"
                 android:id="@+id/chatusernme"
-                android:textColor="@color/white"
+                android:textColor="@color/bgredy"
                 android:textSize="16dp"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
@@ -126,19 +112,13 @@
                 android:layout_below="@+id/chatusernme"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@id/cardview"
-                android:textColor="@color/white"
+                android:textColor="@color/bgredy"
                 android:singleLine="true"
                 >
 
             </TextView>
 
 
-        </RelativeLayout>
 
-
-
-
-
-    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

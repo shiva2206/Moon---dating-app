@@ -25,7 +25,6 @@ import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.cardview.widget.CardView;
 import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -795,11 +794,11 @@ public class chatadap extends RecyclerView.Adapter<chatadap.viehdr> {
     }
 
     public class viehdr extends RecyclerView.ViewHolder {
-        private RelativeLayout firpers, secoper, ani;
+        private RelativeLayout  ani;
         private ImageView prof, firimag, secimag, annocru, annofri, annoadm, seclik, firlik, roimg, rtimg;
         private VideoView firvido, secvideo, rovid, rtvid;
         private TextView secch, firch, newmess, seene, fitime, sectime, ronme, rtnme, rocht, rtcht,ddt;
-        private CardView cds, cdf, rt, ro;
+        private RelativeLayout cds, cdf, rt, ro;
 
         public viehdr(@NonNull View itemView) {
             super(itemView);
@@ -809,8 +808,7 @@ public class chatadap extends RecyclerView.Adapter<chatadap.viehdr> {
             ani = itemView.findViewById(R.id.ani);
             ddt = itemView.findViewById(R.id.datedat);
 
-            firpers = itemView.findViewById(R.id.firper);
-            secoper = itemView.findViewById(R.id.secper);
+
             prof = itemView.findViewById(R.id.chatpro);
             secch = itemView.findViewById(R.id.chatch);
             firch = itemView.findViewById(R.id.fircht);
