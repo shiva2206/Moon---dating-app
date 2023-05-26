@@ -1,261 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="@color/cardview_dark_background"
+
     android:layout_gravity="center"
     android:padding="10dp"
     app:cardCornerRadius="30dp"
     android:layout_margin="10dp"
+    android:background="@drawable/solidred2"
     >
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_gravity="center">
 
-        <androidx.cardview.widget.CardView
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/bltk"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/bluesolidcircle"
+                android:visibility="gone">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/cf"
-            android:backgroundTint="@color/red"
-            android:layout_centerVertical="true"
+            android:layout_above="@+id/hnae"
+            android:layout_below="@+id/anno"
             android:layout_centerHorizontal="true"
-            app:cardCornerRadius="30dp">
+            android:backgroundTint="@color/black">
 
-            <androidx.cardview.widget.CardView
+            <ImageView
+                android:id="@+id/bcvpa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/vpa"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:scaleType="centerCrop">
 
-                android:backgroundTint="@color/red"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-
-                android:id="@+id/cd"
-                app:cardCornerRadius="30dp"
-                >
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/black"
-                    android:padding="5dp">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginRight="17dp"
-                        android:background="@color/black"
-                        app:cardCornerRadius="50dp">
-
-                        <ImageView
-                            android:id="@+id/remove"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:padding="3dp"
-                            android:src="@drawable/closee"
-                            android:visibility="gone">
-
-                        </ImageView>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageView
-                            android:id="@+id/bltk"
-                            android:layout_width="35dp"
-                            android:layout_height="35dp"
-                            android:src="#03A9F4"
-                            android:visibility="gone">
-
-                        </ImageView>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_above="@+id/hnae"
-                        android:layout_below="@+id/anno"
-                        android:layout_centerHorizontal="true"
-                        android:backgroundTint="@color/black">
-
-                        <ImageView
-                            android:id="@+id/bcvpa"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"></ImageView>
-
-                        <ImageView
-                            android:id="@+id/vpa"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center"
-                            android:scaleType="centerCrop">
-
-                        </ImageView>
-                    </androidx.cardview.widget.CardView>
+            </ImageView>
+        </RelativeLayout>
 
 
-                    <RelativeLayout
-                        android:id="@+id/anno"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:padding="4dp"
-                        android:layout_centerHorizontal="true">
+        <RelativeLayout
+            android:id="@+id/anno"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:padding="4dp"
+            android:layout_centerHorizontal="true">
 
-                        <ImageView
-                            android:id="@+id/cru"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/liked"
-                            android:visibility="gone">
+            <ImageView
+                android:id="@+id/cru"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/liked"
+                android:visibility="gone">
 
-                        </ImageView>
+            </ImageView>
 
-                        <ImageView
-                            android:id="@+id/adm"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_toRightOf="@+id/cru"
-                            android:src="@drawable/admirer"
-                            android:visibility="gone">
+            <ImageView
+                android:id="@+id/adm"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/cru"
+                android:src="@drawable/admirer"
+                android:visibility="gone">
 
-                        </ImageView>
+            </ImageView>
 
-                        <ImageView
-                            android:id="@+id/fri"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_toRightOf="@+id/adm"
-                            android:src="@drawable/friend"
-                            android:visibility="gone">
+            <ImageView
+                android:id="@+id/fri"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/adm"
+                android:src="@drawable/friend"
+                android:visibility="gone">
 
-                        </ImageView>
+            </ImageView>
 
-                    </RelativeLayout>
-                    <!--            <com.smarteist.autoimageslider.SliderView-->
-                    <!--                android:layout_width="match_parent"-->
-                    <!--                android:layout_height="300dp"-->
-                    <!--                android:id="@+id/swipe"-->
-                    <!--                app:sliderScrollTimeInSec="2"-->
-                    <!--                app:sliderStartAutoCycle="true"-->
-                    <!--                app:sliderAutoCycleDirection="right"-->
-                    <!--                app:sliderIndicatorPadding="10dp"-->
-                    <!--                app:sliderIndicatorRadius="2dp"-->
-                    <!--                app:sliderIndicatorSelectedColor="@color/white"-->
-                    <!--                app:sliderIndicatorUnselectedColor="@color/black"-->
-                    <!--                app:sliderIndicatorGravity="center_horizontal|bottom"-->
-                    <!--                app:sliderIndicatorOrientation="horizontal"-->
-                    <!--                app:sliderAnimationDuration="1000"-->
-                    <!--                >-->
+        </RelativeLayout>
+        <!--            <com.smarteist.autoimageslider.SliderView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="300dp"-->
+        <!--                android:id="@+id/swipe"-->
+        <!--                app:sliderScrollTimeInSec="2"-->
+        <!--                app:sliderStartAutoCycle="true"-->
+        <!--                app:sliderAutoCycleDirection="right"-->
+        <!--                app:sliderIndicatorPadding="10dp"-->
+        <!--                app:sliderIndicatorRadius="2dp"-->
+        <!--                app:sliderIndicatorSelectedColor="@color/white"-->
+        <!--                app:sliderIndicatorUnselectedColor="@color/black"-->
+        <!--                app:sliderIndicatorGravity="center_horizontal|bottom"-->
+        <!--                app:sliderIndicatorOrientation="horizontal"-->
+        <!--                app:sliderAnimationDuration="1000"-->
+        <!--                >-->
 
-                    <!--            </com.smarteist.autoimageslider.SliderView>-->
-
-
-                    <TextView
-                        android:id="@+id/hnae"
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_above="@+id/nme"
-                        android:background="@color/black"
-                        android:textColor="@color/white"
-                        android:textSize="22dp"
-                        android:singleLine="true"
-                        android:textStyle="bold">
-
-                    </TextView>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:id="@+id/nme"
-                        android:textColor="@color/white"
-                        android:textSize="18dp"
-                        android:singleLine="true"
-                        android:layout_above="@+id/dists">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/stats"
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:singleLine="true"
-                        android:layout_above="@id/ss"
-                        android:textColor="@color/white"
-                        android:textSize="18dp">
-
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/dists"
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_above="@+id/ss"
-                        android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@id/hnae"
-                        android:background="@color/black"
-
-                        android:textColor="@color/white"
-                        android:textSize="18dp">
-
-                    </TextView>
+        <!--            </com.smarteist.autoimageslider.SliderView>-->
 
 
-                    <TextView
-                        android:id="@+id/ag"
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_above="@+id/nme"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginBottom="-4dp"
-                        android:layout_toRightOf="@id/hnae"
-                        android:background="@color/black"
-                        android:textColor="@color/white"
-                        android:textSize="18dp">
+        <TextView
+            android:id="@+id/hnae"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_above="@+id/nme"
 
-                    </TextView>
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:singleLine="true"
+            android:textStyle="bold">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/nme"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:layout_above="@+id/dists">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/stats"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:singleLine="true"
+            android:layout_above="@id/buts"
+            android:textColor="@color/white"
+            android:textSize="18dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/dists"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_above="@+id/buts"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/hnae"
 
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/ss"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_margin="10dp"
-                        android:layout_marginBottom="19dp"
-                        android:backgroundTint="@color/grey"
-                        app:cardCornerRadius="30dp">
+            android:textColor="@color/white"
+            android:textSize="18dp">
 
-                        <Button
-                            android:id="@+id/buts"
-                            android:layout_width="match_parent"
+        </TextView>
 
 
-                            android:layout_height="40dp"
-                            android:background="@color/grey"
-                            android:textSize="20dp">
+        <TextView
+            android:id="@+id/ag"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_above="@+id/nme"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="-4dp"
+            android:layout_toRightOf="@id/hnae"
 
-                        </Button>
-                    </androidx.cardview.widget.CardView>
+            android:textColor="@color/white"
+            android:textSize="18dp">
 
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-        </androidx.cardview.widget.CardView>
-
-    </RelativeLayout>
+        </TextView>
 
 
 
-</androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/buts"
+            android:layout_width="match_parent"
+
+
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+
+
+            android:textColor="@color/bgredy"
+            android:layout_height="40dp"
+            android:background="@drawable/redwhitefilled2"
+            android:textSize="20dp"
+            >
+
+        </Button>
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

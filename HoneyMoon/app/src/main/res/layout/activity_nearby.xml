@@ -4,37 +4,30 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".nearby"
-    android:background="@color/red">
+    android:background="@color/white">
 
-    <androidx.cardview.widget.CardView
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="30dp"
-        android:layout_margin="10dp"
-        android:id="@+id/scd"
-        android:backgroundTint="@color/black">
+        android:text="NEARBY"
+        android:textColor="@color/bgredy"
+        android:textSize="18dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:id="@+id/nby"
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="NEARBY"
-            android:textColor="@color/white"
-            android:textSize="18dp"
-            android:padding="5dp"
-            android:gravity="center"
-            android:id="@+id/nby"
+        android:layout_margin="5dp"
+        android:background="@drawable/redwhitefilled2">
 
-            android:layout_margin="5dp"
-            android:background="@color/black">
+    </TextView>
 
-        </TextView>
 
-    </androidx.cardview.widget.CardView>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/scd">
+        android:layout_below="@+id/nby">
 
 
         <TextView

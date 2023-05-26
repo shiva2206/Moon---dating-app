@@ -10,11 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.honeymoon.Mainactivity;
@@ -168,7 +168,7 @@ public class calladp extends RecyclerView.Adapter<calladp.vieh>{
 
     public class vieh extends RecyclerView.ViewHolder{
 
-        private CardView cd;
+        private RelativeLayout cd;
         private TextView username,time,talktime,ddt;
         private ImageView type,going,profle,annocru,annofri,annoadm;
         public vieh(@NonNull View itemView) {
@@ -184,7 +184,7 @@ public class calladp extends RecyclerView.Adapter<calladp.vieh>{
             annocru=itemView.findViewById(R.id.cru);
             annofri=itemView.findViewById(R.id.fri);
             ddt=itemView.findViewById(R.id.datedat);
-            cd=itemView.findViewById(R.id.calcd);
+            cd=itemView.findViewById(R.id.calrl);
 
         }
     }

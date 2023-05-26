@@ -5,55 +5,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="fragment.notify"
     android:id="@+id/srl"
-    android:background="@color/red">
 
+    android:background="@color/white">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/red"
-        android:padding="5dp">
-        <androidx.cardview.widget.CardView
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:text="NOTIFICATIONS"
+            android:id="@+id/qwe"
+            android:layout_centerHorizontal="true"
+            android:textSize="14dp">
+
+        </TextView>
+
+
+
+
+        <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/sccd"
-            app:cardCornerRadius="30dp"
-            android:backgroundTint="@color/black">
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/black"
-                android:textColor="@color/white"
-                android:text="NOTIFICATION"
-                android:textSize="14dp">
+            android:id="@+id/tably"
+            android:layout_below="@+id/qwe"
+            app:tabInlineLabel="true"
 
-            </Button>
+            app:tabTextColor="@color/bgredy"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+            android:background="@drawable/redwhitefilled2">
+
+        </com.google.android.material.tabs.TabLayout>
 
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/seccd"
-            app:cardCornerRadius="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@+id/sccd"
-            android:backgroundTint="@color/black">
-            <com.google.android.material.tabs.TabLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tably"
-                app:tabInlineLabel="true"
-                app:tabTextColor="@color/grey"
-                app:tabSelectedTextColor="@color/white"
-                app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
-                android:background="@color/black">
 
-            </com.google.android.material.tabs.TabLayout>
-
-
-        </androidx.cardview.widget.CardView>
         <androidx.viewpager.widget.ViewPager
             android:layout_width="match_parent"
             android:layout_height="match_parent"

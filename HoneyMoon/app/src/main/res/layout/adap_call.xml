@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/red"
-    android:padding="3dp"
+    android:background="@color/white"
+    android:padding="1dp"
+    android:id="@+id/calrl"
     android:elevation="100dp">
     <TextView
         android:layout_width="wrap_content"
@@ -19,19 +20,12 @@
         android:visibility="gone">
 
     </TextView>
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-        app:cardCornerRadius="30dp"
-        android:layout_margin="4dp"
-        android:id="@+id/calcd"
-        android:layout_below="@+id/datedat">
 
-        <RelativeLayout
+
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/black"
+            android:background="@drawable/solidred2"
             android:layout_margin="4dp"
             android:padding="7dp"
             android:elevation="100dp">
@@ -136,7 +130,7 @@
         </RelativeLayout>
 
 
-    </androidx.cardview.widget.CardView>
+
 
 
 </RelativeLayout>

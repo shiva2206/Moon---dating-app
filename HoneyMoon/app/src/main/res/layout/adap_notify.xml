@@ -3,154 +3,141 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="3dp"
+    android:padding="10dp"
+    android:background="@drawable/solidred2">
 
-    android:background="@color/red">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cdlikecomm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/red"
-        android:elevation="5dp"
-        android:padding="5dp"
-        app:cardCornerRadius="30dp"
-        android:layout_margin="3dp">
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:background="@color/black">
-            <RelativeLayout
+            android:layout_toLeftOf="@+id/pst"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="70dp"
+            android:layout_below="@+id/chatusernme"
+            android:layout_marginTop="2dp">
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toLeftOf="@+id/pst"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="70dp"
-                android:layout_below="@+id/chatusernme"
-                android:layout_marginTop="2dp">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/liked"
-                    android:id="@+id/cru"
-                    android:visibility="gone"
-                    >
-
-                </ImageView>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/admirer"
-                    android:id="@+id/adm"
-                    android:visibility="gone"
-                    android:layout_toRightOf="@+id/cru">
-
-                </ImageView>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/friend"
-                    android:id="@+id/fri"
-                    android:visibility="gone"
-                    android:layout_toRightOf="@+id/adm">
-
-                </ImageView>
-
-            </RelativeLayout>
-            <androidx.cardview.widget.CardView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:cardCornerRadius="100dp"
-                android:backgroundTint="@color/black"
-                android:layout_centerVertical="true"
-                android:id="@+id/cdd">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/black"
-                    android:id="@+id/cardview">
-
-                </de.hdodenhof.circleimageview.CircleImageView>
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/chatpro"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:src="@mipmap/blackypic"
-                    android:layout_gravity="center">
-
-                </de.hdodenhof.circleimageview.CircleImageView>
-
-
-            </androidx.cardview.widget.CardView>
-
-
-            <ImageView
-                android:id="@+id/rej"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
-                android:padding="4dp"
-                android:src="@drawable/block"
-                android:visibility="gone">
+                android:src="@drawable/liked"
+                android:id="@+id/cru"
+                android:visibility="gone"
+                >
 
             </ImageView>
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/bigadd"
-                android:layout_marginRight="20dp"
-                android:padding="4dp"
-                android:layout_centerVertical="true"
-                android:id="@+id/acc"
-                android:layout_toLeftOf="@+id/rej"
-                android:visibility="gone">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/admirer"
+                android:id="@+id/adm"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/cru">
 
             </ImageView>
-            <TextView
-                android:id="@+id/chatusernme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="60dp"
-                android:layout_toLeftOf="@+id/cdnomess"
-                android:layout_toRightOf="@id/cdd"
-                android:textColor="@color/white"
-                android:textSize="17dp"
-                android:singleLine="true"
-                android:textStyle="bold"></TextView>
-
-            <TextView
-                android:id="@+id/chatlin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/chatusernme"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="60dp"
-                android:layout_toLeftOf="@+id/cdnomess"
-                android:layout_toRightOf="@id/cdd"
-                android:textColor="@color/white"
-                android:textSize="12dp">
-
-            </TextView>
-
             <ImageView
-                android:id="@+id/pst"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
-                android:src="@mipmap/logo"
-                android:visibility="gone">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/friend"
+                android:id="@+id/fri"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/adm">
 
             </ImageView>
 
         </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="100dp"
+            android:backgroundTint="@color/black"
+            android:layout_centerVertical="true"
+            android:id="@+id/cdd">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:id="@+id/cardview">
 
-    </androidx.cardview.widget.CardView>
+            </de.hdodenhof.circleimageview.CircleImageView>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/chatpro"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@mipmap/blackypic"
+                android:layout_gravity="center">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/rej"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:padding="4dp"
+            android:src="@drawable/block"
+            android:visibility="gone">
+
+        </ImageView>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/bigadd"
+            android:layout_marginRight="20dp"
+            android:padding="4dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/acc"
+            android:layout_toLeftOf="@+id/rej"
+            android:visibility="gone">
+
+        </ImageView>
+        <TextView
+            android:id="@+id/chatusernme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_toLeftOf="@+id/cdnomess"
+            android:layout_toRightOf="@id/cdd"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:singleLine="true"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/chatlin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chatusernme"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="60dp"
+
+            android:layout_toRightOf="@id/cdd"
+            android:textColor="@color/white"
+            android:textSize="12dp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/pst"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/logo"
+            android:visibility="gone">
+
+        </ImageView>
+
+
+
 
 
 </RelativeLayout>

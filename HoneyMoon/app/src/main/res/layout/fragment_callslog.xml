@@ -4,28 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red"
+    android:background="@color/white"
     tools:context="fragment.callslog">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/funcd"
+
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="30dp">
+        android:background="@drawable/redwhitefilled2"
+        android:layout_margin="3dp"
+        android:text="All Calls"
+        android:textAlignment="center"
+        android:id="@+id/funcd"
+        android:textColor="@color/bgredy"
+        android:textSize="14dp">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/black"
-            android:text="All Calls"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="14dp">
+    </Button>
 
-        </Button>
 
-    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/nn"
