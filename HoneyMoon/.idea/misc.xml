@@ -175,6 +175,7 @@
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/drawable/redwhitefilled2.xml" value="0.2775" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/activity_call.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/activity_chats.xml" value="0.27291666666666664" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/activity_comments.xml" value="0.2" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/activity_create.xml" value="0.25263157894736843" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/activity_login_two.xml" value="0.27291666666666664" />
@@ -187,11 +188,13 @@
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_chats.xml" value="0.18854166666666666" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_chatsleft.xml" value="0.5" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_chatsright.xml" value="0.25729166666666664" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_comments.xml" value="0.24791666666666667" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_image.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_mess.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_nearby.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_notify.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_post.xml" value="0.67" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_reply.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_search.xml" value="0.26268115942028986" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_search_two.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_status.xml" value="0.5" />
@@ -201,6 +204,8 @@
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_home_mess.xml" value="0.26268115942028986" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_home_stories.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_notify.xml" value="0.27291666666666664" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_notify_others.xml" value="0.27291666666666664" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_notify_requests.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_search.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/sty_create.xml" value="0.22" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/sty_login.xml" value="0.27291666666666664" />

@@ -10,7 +10,7 @@
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/red"
+        android:background="@color/white"
         android:id="@+id/srl"
         android:layout_above="@+id/www"
         android:padding="4dp"
@@ -19,91 +19,93 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                >
+
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rt"
-                    android:background="@color/red"
-                    android:padding="5dp"
-                    android:elevation="100dp"
-                    >
+                    android:id="@+id/qaz"
+                    android:visibility="gone"
+                    android:background="@drawable/redwhitefilled2">
+                    <RelativeLayout
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:id="@+id/rt"
+                        android:layout_alignParentLeft="true"
 
-                    <androidx.cardview.widget.CardView
+                        android:layout_margin="5dp"
+                        android:elevation="100dp"
+                        >
 
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:id="@+id/cardview"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center">
+
+                        </de.hdodenhof.circleimageview.CircleImageView>
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:id="@+id/pr"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:padding="5dp">
+
+                        </de.hdodenhof.circleimageview.CircleImageView>
+
+                    </RelativeLayout>
+
+
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/fl"
-                        android:backgroundTint="@color/black"
-                        app:cardCornerRadius="30dp">
+                        android:layout_toRightOf="@+id/rt"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/descri"
+                        android:textSize="16dp"
+                        android:textStyle="bold">
 
+                    </TextView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/descri"
+                        android:layout_toRightOf="@+id/rt"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/tm">
 
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:backgroundTint="@color/black"
-                            android:id="@+id/cie"
-                            app:cardCornerRadius="100dp"
-                            android:layout_margin="5dp">
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:id="@+id/cardview"
-
-                                android:layout_gravity="center">
-
-                            </de.hdodenhof.circleimageview.CircleImageView>
-                            <de.hdodenhof.circleimageview.CircleImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:id="@+id/pr"
-                                android:src="@mipmap/blackypic"
-                                android:layout_gravity="center"
-                                android:padding="5dp">
-
-                            </de.hdodenhof.circleimageview.CircleImageView>
-
-                        </androidx.cardview.widget.CardView>
-
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toRightOf="@+id/cie"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginLeft="70dp"
-                            android:textColor="@color/white"
-                            android:id="@+id/descri"
-                            android:textSize="16dp"
-                            android:textStyle="bold">
-
-                        </TextView>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/descri"
-                            android:layout_toRightOf="@+id/cie"
-                            android:layout_marginLeft="70dp"
-                            android:layout_marginTop="3dp"
-                            android:textColor="@color/white"
-                            android:id="@+id/tm">
-
-                        </TextView>
-                    </androidx.cardview.widget.CardView>
+                    </TextView>
                 </RelativeLayout>
-                <TextView
+
+
+
+                <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="----Comments----"
-                    android:layout_below="@+id/rt"
+                    android:layout_below="@+id/qaz"
                     android:textAlignment="center"
-                    android:textSize="14dp"
+                    android:background="@drawable/redwhitefilled2"
+                    android:textColor="@color/bgredy"
                     android:textStyle="bold"
                     android:id="@+id/d">
 
-                </TextView>
+                </Button>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -135,56 +137,49 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/red"
+        android:background="@drawable/solidred2"
         android:padding="5dp"
         android:elevation="100dp">
-        <androidx.cardview.widget.CardView
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/curprod"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/blackypic"
+            android:layout_marginLeft="5dp">
+
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <ImageView
+            android:id="@+id/sendcomm"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+
+            android:layout_centerVertical="true"
+            android:src="@drawable/sendwhite">
+
+        </ImageView>
+        <com.hendraanggrian.appcompat.widget.SocialEditText
+            android:id="@+id/commentedt"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardCornerRadius="30dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:padding="5dp">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/curprod"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/blackypic"
-                    android:layout_marginLeft="5dp">
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_toLeftOf="@+id/sendcomm"
+            android:layout_toRightOf="@+id/curprod"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:hint="Comment"
+            style="@style/NoUnderlineEditText"
+
+            android:textColorHint="@color/white">
+
+        </com.hendraanggrian.appcompat.widget.SocialEditText>
 
 
-                </de.hdodenhof.circleimageview.CircleImageView>
-
-                <ImageView
-                    android:id="@+id/sendcomm"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentRight="true"
-
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/sendwhite">
-
-                </ImageView>
-                <com.hendraanggrian.appcompat.widget.SocialEditText
-                    android:id="@+id/commentedt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toLeftOf="@+id/sendcomm"
-                    android:layout_toRightOf="@+id/curprod"
-                    android:textColor="@color/white"
-
-                    android:hint="Comment"
-                    android:textColorHint="@color/white">
-
-                </com.hendraanggrian.appcompat.widget.SocialEditText>
-
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
 
 
 

@@ -20,7 +20,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -554,11 +553,11 @@ public class commentsadp extends RecyclerView.Adapter<commentsadp.viewholder>{
     }
 
     public class viewholder extends RecyclerView.ViewHolder{
-        private CardView cdf;
+
         private ImageView imagei,replimg,like,bcimg,annocru,annofri,annoadm;
         private TextView reply,comm,username,done,nolik,tme,repusrnm;
         private RecyclerView recyclerView;
-        private RelativeLayout relativeLayout;
+        private RelativeLayout relativeLayout,cdf;
         private SocialEditText socioreply;
 
 
