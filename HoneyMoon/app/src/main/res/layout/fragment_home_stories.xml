@@ -23,14 +23,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:background="@drawable/solidrect">
+                    android:background="@drawable/redwhitefilled2">
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toLeftOf="@+id/mn"
                         android:layout_marginRight="10dp"
                         android:id="@+id/tp">
-                        <androidx.cardview.widget.CardView
+                        <RelativeLayout
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:id="@+id/cdpoos"
@@ -50,11 +50,12 @@
                                 android:src="@mipmap/logo"
                                 android:id="@+id/poos"
                                 android:layout_gravity="center"
-                                >
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true">
 
                             </de.hdodenhof.circleimageview.CircleImageView>
 
-                        </androidx.cardview.widget.CardView>
+                        </RelativeLayout>
 
 
 
@@ -66,7 +67,7 @@
                             android:layout_marginLeft="10dp"
                             android:id="@+id/udemy"
                             android:singleLine="true"
-                            android:textColor="@color/white"
+                            android:textColor="@color/bgredy"
                             android:textSize="16dp"
                             android:textStyle="bold"
                             android:layout_marginRight="10dp">
@@ -80,7 +81,7 @@
                             android:layout_marginLeft="10dp"
                             android:layout_toRightOf="@id/cdpoos"
                             android:text="Tap to add Story"
-                            android:textColor="@color/white"
+                            android:textColor="@color/bgredy"
 
                             >
 

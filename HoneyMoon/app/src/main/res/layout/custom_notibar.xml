@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="15dp"
 
-    android:background="@color/black">
+    android:background="@drawable/redwhitefilled2">
 <!--    <de.hdodenhof.circleimageview.CircleImageView-->
 <!--        android:layout_width="10dp"-->
 <!--        android:layout_height="10dp"-->
@@ -20,7 +20,7 @@
         android:textSize="8dp"
         android:id="@+id/hmtxt"
         android:layout_marginLeft="8dp"
-        android:textColor="@color/grey"
+
         >
 
     </TextView>
@@ -36,7 +36,7 @@
         android:layout_centerHorizontal="true"/>
     <TextView
         android:textSize="15dp"
-        android:textColor="@color/white"
+
         android:text="Testing"
         android:textStyle="bold"
         android:layout_marginTop="3dp"
@@ -47,9 +47,10 @@
         android:layout_toRightOf="@id/image"
         android:layout_below="@+id/hmtxt"
         />
+
     <TextView
         android:textSize="14dp"
-        android:textColor="@color/white"
+
         android:text="Testing is awecome"
         android:id="@+id/text"
         android:layout_width="wrap_content"

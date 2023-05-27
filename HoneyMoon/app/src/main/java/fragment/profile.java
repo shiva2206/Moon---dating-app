@@ -110,7 +110,7 @@ public class profile extends Fragment {
     private TabLayout tb;
     private List<String> titlst;
     private String str,child;
-    private CardView addasfricd,hiadrl;
+
     private Uri uri;
     private Double distt;
     private Intent intemut;
@@ -153,7 +153,7 @@ public class profile extends Fragment {
         annoadmi = view.findViewById(R.id.annoadmirer);
         annocrus = view.findViewById(R.id.annocrush);
         annofr = view.findViewById(R.id.annofri);
-        addasfricd= view.findViewById(R.id.addasfricd);
+
 
         abtrels = view.findViewById(R.id.abre);
         chmag=getChildFragmentManager();
@@ -208,7 +208,7 @@ public class profile extends Fragment {
             dist.setVisibility(GONE);
             editpro.setVisibility(VISIBLE);
             saved.setVisibility(VISIBLE);
-            hiadrl.setVisibility(VISIBLE);
+            profadd.setVisibility(VISIBLE);
             covadrl.setVisibility(VISIBLE);
             privtxt.setVisibility(GONE);
             privrel.setVisibility(VISIBLE);
@@ -217,7 +217,7 @@ public class profile extends Fragment {
             editpro.setVisibility(GONE);
             saved.setVisibility(GONE);
             dist.setVisibility(VISIBLE);
-            hiadrl.setVisibility(GONE);
+            profadd.setVisibility(GONE);
             covadrl.setVisibility(GONE);
             butmut.setVisibility(VISIBLE);
 
@@ -1137,11 +1137,11 @@ public class profile extends Fragment {
                         !userinfo.getGender().equals(currgender)){
 
 
-                    addasfricd.setVisibility(VISIBLE);
+                    addfri.setVisibility(VISIBLE);
 
                 }else{
 
-                    addasfricd.setVisibility(GONE);
+                    addfri.setVisibility(GONE);
                 }
 
 

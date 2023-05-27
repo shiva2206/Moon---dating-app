@@ -4,80 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red"
     android:id="@+id/srl"
     tools:context="fragment.profile">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/red"
         android:orientation="vertical"
         android:padding="10dp">
-        <androidx.cardview.widget.CardView
-            android:id="@+id/fncd"
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/nsvv"
-            android:layout_marginBottom="3dp"
-            android:paddingBottom="10dp"
-            app:cardCornerRadius="30dp">
-
-            <LinearLayout
-                android:id="@+id/annore"
-                android:layout_width="match_parent"
+            android:background="@drawable/redwhitefilled2">
+            <RelativeLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/black"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_centerHorizontal="true"
+                >
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true">
+                <ImageView
+                    android:id="@+id/annocrush"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/liked"
+                    >
 
-                    <ImageView
-                        android:id="@+id/annocrush"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/liked"
-                        android:visibility="gone">
+                </ImageView>
 
-                    </ImageView>
+                <ImageView
+                    android:id="@+id/annoadmirer"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/annocrush"
+                    android:src="@drawable/admirer"
+                    android:visibility="gone">
 
-                    <ImageView
-                        android:id="@+id/annoadmirer"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/annocrush"
-                        android:src="@drawable/admirer"
-                        android:visibility="gone">
+                </ImageView>
 
-                    </ImageView>
-
-                    <ImageView
-                        android:id="@+id/annofri"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@+id/annoadmirer"
-                        android:src="@drawable/friend"
-                        android:visibility="gone">
+                <ImageView
+                    android:id="@+id/annofri"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/annoadmirer"
+                    android:src="@drawable/friend"
+                    android:visibility="gone">
 
 
-                    </ImageView>
+                </ImageView>
 
-                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
 
 
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
+
         <androidx.core.widget.NestedScrollView
             android:id="@+id/nsvv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/fncd">
+            android:layout_below="@+id/fncd"
+            android:layout_marginTop="2dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,26 +77,23 @@
                 <RelativeLayout
                     android:id="@+id/covimgrel"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/solidrect3">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/black"
-                        app:cardCornerRadius="30dp">
 
-                        <com.zolad.zoominimageview.ZoomInImageView
+
+                    <com.zolad.zoominimageview.ZoomInImageView
                             android:id="@+id/covimg"
                             android:layout_width="match_parent"
                             android:layout_height="250dp"
                             android:adjustViewBounds="true"
                             android:elevation="100dp"
                             android:scaleType="centerCrop"
-                            android:src="@mipmap/blackypic">
+                            >
 
                         </com.zolad.zoominimageview.ZoomInImageView>
 
-                    </androidx.cardview.widget.CardView>
+
 
                     <RelativeLayout
                         android:id="@+id/covadrl"
@@ -216,29 +203,25 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/hiadrl"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profadd"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:layout_below="@+id/prore"
                         android:layout_gravity="bottom|right"
                         android:layout_marginLeft="-20dp"
                         android:layout_marginTop="-25dp"
                         android:layout_toRightOf="@+id/prore"
-                        app:cardCornerRadius="10dp">
+                        android:background="@drawable/redfilledcircle"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_menu_camera">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/profadd"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:background="@color/white"
-                            android:padding="2dp"
-                            android:src="@drawable/ic_menu_camera">
-
-                        </de.hdodenhof.circleimageview.CircleImageView>
+                    </de.hdodenhof.circleimageview.CircleImageView>
 
 
-                    </androidx.cardview.widget.CardView>
+
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -264,47 +247,34 @@
 
                         </TextView>
 
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/messcd"
+
+                        <Button
+                            android:id="@+id/butmess"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="30dp"
                             android:layout_below="@+id/profuser"
-                            android:layout_marginTop="8dp"
-                            android:backgroundTint="@color/black"
-                            app:cardCornerRadius="30dp">
+                            android:background="@drawable/redwhitefilled2"
+                            android:text="MESSAGE"
+                            android:textColor="@color/bgredy"
+                            android:textSize="13dp">
 
-                            <Button
-                                android:id="@+id/butmess"
-                                android:layout_width="match_parent"
-                                android:layout_height="30dp"
-                                android:layout_below="@+id/profuser"
-                                android:background="@color/black"
-                                android:text="MESSAGE"
-                                android:textColor="@color/white"
-                                android:textSize="13dp">
+                        </Button>
 
-                            </Button>
-                        </androidx.cardview.widget.CardView>
 
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/follcd"
+
+
+                        <Button
+                            android:id="@+id/butfoll"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/messcd"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/butmess"
                             android:layout_marginTop="10dp"
-                            android:backgroundTint="@color/black"
-                            app:cardCornerRadius="30dp">
+                            android:background="@drawable/redwhitefilled2"
+                            android:textColor="@color/bgredy"
+                            android:textSize="13dp">
 
-                            <Button
-                                android:id="@+id/butfoll"
-                                android:layout_width="match_parent"
-                                android:layout_height="30dp"
-                                android:background="@color/black"
-                                android:textColor="@color/white"
-                                android:textSize="13dp">
+                        </Button>
 
-                            </Button>
-                        </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/edicd"
@@ -410,164 +380,117 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true">
 
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/addascrucd"
+
+
+                        <Button
+                            android:id="@+id/butaddcru"
                             android:layout_width="170dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/solidrect"
+                            android:text="add as crush"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:visibility="gone">
 
-                            app:cardCornerRadius="30dp">
+                        </Button>
 
-                            <Button
-                                android:id="@+id/butaddcru"
-                                android:layout_width="170dp"
-                                android:layout_height="30dp"
-                                android:background="@color/black"
-                                android:text="add as crush"
-                                android:textColor="@color/white"
-                                android:textSize="13dp"
-                                android:visibility="gone">
-
-                            </Button>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/addasfricd"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_toRightOf="@+id/addascrucd"
-                            android:visibility="gone"
-                            app:cardCornerRadius="30dp">
 
                             <Button
                                 android:id="@+id/butaddfri"
                                 android:layout_width="170dp"
+                                android:layout_marginLeft="10dp"
                                 android:layout_height="30dp"
-                                android:background="@color/black"
+                                android:layout_toRightOf="@+id/butaddcru"
+                                android:visibility="gone"
+                                android:background="@drawable/solidrect"
                                 android:text="add as "
 
                                 android:textColor="@color/white"
                                 android:textSize="13dp">
 
                             </Button>
-                        </androidx.cardview.widget.CardView>
+
 
                     </RelativeLayout>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/ki"
+
+
+
+                    <Button
+                        android:id="@+id/butmut"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/addre"
+                        android:layout_height="35dp"
+                        android:background="@drawable/solidrect"
+                        android:text="Mutuals"
                         android:layout_marginTop="10dp"
-                        android:backgroundTint="@color/black"
-                        app:cardCornerRadius="30dp">
+                        android:textColor="@color/white"
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <Button
-                                android:id="@+id/butmut"
-                                android:layout_width="match_parent"
-                                android:layout_height="35dp"
-                                android:background="@color/black"
-                                android:text="Mutuals"
-                                android:textColor="@color/white"
-                                android:textSize="13dp">
-
-                            </Button>
+                        android:textSize="13dp">
 
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                    </Button>
+
+
 
                     <RelativeLayout
                         android:id="@+id/cen"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/ki"
+                        android:layout_below="@+id/butmut"
                         android:layout_marginTop="10dp">
 
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/follgcd"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:cardCornerRadius="30dp">
+
 
                             <Button
                                 android:id="@+id/butfollg"
                                 android:layout_width="100dp"
                                 android:layout_height="70dp"
-                                android:background="@color/black"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/redwhitefilled"
                                 android:text="FOLLOWINGS \n \n "
+                                android:textColor="@color/bgredy"
+                                android:textSize="13dp">
+
+                            </Button>
+
+
+
+
+                            <Button
+                                android:id="@+id/butfollw"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_width="100dp"
+                                android:layout_height="70dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@drawable/redwhitefilled"
+                                android:text="FOLLOWERS \n \n  "
                                 android:textColor="@color/white"
                                 android:textSize="13dp">
 
                             </Button>
-                        </androidx.cardview.widget.CardView>
 
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_toLeftOf="@+id/tagscd"
-                            android:backgroundTint="@color/red"
-                            app:cardCornerRadius="30dp">
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="100dp"
-                                android:layout_height="70dp"
-                                android:layout_gravity="center"
-                                android:backgroundTint="@color/black"
-                                app:cardCornerRadius="30dp">
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center">
-
-                                    <Button
-                                        android:id="@+id/butfollw"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:background="@color/black"
-                                        android:text="FOLLOWERS \n \n  "
-                                        android:textColor="@color/white"
-                                        android:textSize="13dp">
-
-                                    </Button>
-
-                                </RelativeLayout>
-
-                            </androidx.cardview.widget.CardView>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/matcd"
-                            android:layout_width="100dp"
-                            android:layout_height="70dp"
-                            android:layout_alignParentRight="true"
-                            android:backgroundTint="@color/black"
-                            app:cardCornerRadius="30dp">
 
                             <RelativeLayout
-                                android:layout_width="match_parent"
+                                android:layout_width="100dp"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center">
+                                android:layout_gravity="center"
+                                android:id="@+id/poi"
+                                android:layout_below="@+id/butfollw"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/redwhitefilled">
 
                                 <Button
                                     android:id="@+id/butmats"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:background="@color/black"
+                                    android:layout_width="100dp"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/nullback"
                                     android:text="Matches"
 
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/bgredy"
                                     android:textSize="13dp">
 
                                 </Button>
@@ -579,38 +502,35 @@
                                     android:layout_below="@+id/butmats"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="-5dp"
-                                    android:src="@mipmap/lock"
+                                    android:background="@drawable/whitelock"
+                                    android:backgroundTint="@color/bgredy"
                                     android:visibility="invisible">
 
                                 </ImageView>
                             </RelativeLayout>
 
 
-                        </androidx.cardview.widget.CardView>
 
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/crucd"
-                            android:layout_width="100dp"
-                            android:layout_height="70dp"
-                            android:layout_below="@+id/follgcd"
-                            android:layout_marginTop="10dp"
-                            android:backgroundTint="@color/black"
-
-                            app:cardCornerRadius="30dp">
 
                             <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_width="100dp"
+                                android:layout_height="70dp"
+                                android:layout_below="@+id/butfollg"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/rect"
                                 android:layout_gravity="center">
 
                                 <Button
                                     android:id="@+id/butcru"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/black"
                                     android:text="Crushs"
-                                    android:textColor="@color/white"
-                                    android:textSize="13dp"></Button>
+                                    android:background="@drawable/nullback"
+                                    android:textColor="@color/bgredy"
+                                    android:textSize="13dp"
+                                    >
+
+                                </Button>
 
                                 <ImageView
                                     android:id="@+id/cruloc"
@@ -618,47 +538,33 @@
                                     android:layout_height="30dp"
                                     android:layout_below="@+id/butcru"
                                     android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="-5dp"
-                                    android:src="@mipmap/lock"
-                                    android:visibility="invisible">
+                                    android:layout_marginTop="-10dp"
+                                    android:background="@drawable/whitelock"
+                                    android:backgroundTint="@color/bgredy"
+
+                                    >
 
                                 </ImageView>
 
                             </RelativeLayout>
 
 
-                        </androidx.cardview.widget.CardView>
 
 
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/admcd"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/follgcd"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_toLeftOf="@+id/tagscd"
-                            android:backgroundTint="@color/red"
-                            app:cardCornerRadius="30dp">
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="100dp"
-                                android:layout_height="70dp"
-                                android:layout_gravity="center"
-                                android:backgroundTint="@color/black"
-                                app:cardCornerRadius="30dp">
-
-                                <RelativeLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center">
+                            <RelativeLayout
+                                    android:layout_below="@+id/follgcd"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="center" android:layout_height="100dp"
+                                    android:layout_width="70dp">
 
                                     <Button
                                         android:id="@+id/butadm"
                                         android:layout_width="100dp"
-                                        android:layout_height="wrap_content"
+                                        android:layout_height="40dp"
                                         android:background="@color/black"
                                         android:text="Admirers"
                                         android:textColor="@color/white"
@@ -680,9 +586,8 @@
                                 </RelativeLayout>
 
 
-                            </androidx.cardview.widget.CardView>
 
-                        </androidx.cardview.widget.CardView>
+
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/fricd"
