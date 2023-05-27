@@ -64,7 +64,8 @@
             android:title="Flames"
             android:id="@+id/flait"
             android:icon="@drawable/like"
-            app:showAsAction="always">
+            app:showAsAction="always"
+            android:visible="false">
 
         </item>
         <item

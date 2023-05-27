@@ -25,7 +25,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -97,7 +96,7 @@ import model.varymodel;
 //username tag for premium/freemium
 public class profile extends Fragment {
 
-    private RelativeLayout abtrels,covadrl,privrel;
+    private RelativeLayout abtrels,privrel;
     private FragmentManager chmag;
     private ImageView prof,covimg, annocrus, annofr, annoadmi, backimg,profadd,coveadd,matloc,cruloc,admloc,friloc;
     private TextView username,dist,age,privtxt,bltk;
@@ -110,7 +109,7 @@ public class profile extends Fragment {
     private TabLayout tb;
     private List<String> titlst;
     private String str,child;
-
+    private RelativeLayout  hiadrl;
     private Uri uri;
     private Double distt;
     private Intent intemut;
@@ -131,7 +130,7 @@ public class profile extends Fragment {
 
 
         profadd=view.findViewById(R.id.profadd);
-        coveadd=view.findViewById(R.id.cverad);
+        coveadd=view.findViewById(R.id.covadrl);
         username = view.findViewById(R.id.profuser);
         dist=view.findViewById(R.id.dist);
         prof = view.findViewById(R.id.pro);
@@ -141,7 +140,6 @@ public class profile extends Fragment {
         srl=view.findViewById(R.id.srl);
         bltk=view.findViewById(R.id.bltk);
         hiadrl=view.findViewById(R.id.hiadrl);
-        covadrl=view.findViewById(R.id.covadrl);
 
         privrel=view.findViewById(R.id.privaterl);
         privtxt=view.findViewById(R.id.pritext);
@@ -209,7 +207,7 @@ public class profile extends Fragment {
             editpro.setVisibility(VISIBLE);
             saved.setVisibility(VISIBLE);
             profadd.setVisibility(VISIBLE);
-            covadrl.setVisibility(VISIBLE);
+            coveadd.setVisibility(VISIBLE);
             privtxt.setVisibility(GONE);
             privrel.setVisibility(VISIBLE);
             butmut.setVisibility(GONE);
@@ -218,7 +216,7 @@ public class profile extends Fragment {
             saved.setVisibility(GONE);
             dist.setVisibility(VISIBLE);
             profadd.setVisibility(GONE);
-            covadrl.setVisibility(GONE);
+            coveadd.setVisibility(GONE);
             butmut.setVisibility(VISIBLE);
 
 
@@ -798,8 +796,8 @@ public class profile extends Fragment {
                     if (dss.getKey().equals(userid)) {
                         userinfo = dss.getValue(usermodel.class);
                         System.out.println(userinfo);
-                        Picasso.get().load(userinfo.getImageurl()).placeholder(R.mipmap.blackypic).into(prof);
-                        Picasso.get().load(userinfo.getCoverimage()).placeholder(R.mipmap.blackypic).into(covimg);
+                        Picasso.get().load(userinfo.getImageurl()).into(prof);
+                        Picasso.get().load(userinfo.getCoverimage()).into(covimg);
                         nmeg.setText(userinfo.getName());
                         username.setText(userinfo.getUsername());
                         abt.setTag(userinfo.getMode());

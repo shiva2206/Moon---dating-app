@@ -96,7 +96,9 @@ public class nearby extends AppCompatActivity {
 
             @Override
             public void onLeftCardExit(Object o) {
-                setswiped(lstuser.get(0));
+                if (lstuser.size()!=0) {
+                    setswiped(lstuser.get(0));
+                }
             }
 
             @Override

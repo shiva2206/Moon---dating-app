@@ -7,10 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.honeymoon.R;
@@ -84,16 +84,16 @@ public class highlightadp extends RecyclerView.Adapter<highlightadp.vie>{
 
     public class vie extends RecyclerView.ViewHolder{
         private ImageView prol;
-        private CardView rela;
+        private RelativeLayout rela;
         private TextView title;
-        private CardView cd;
+
         public vie(@NonNull View itemView) {
             super(itemView);
 
             prol=itemView.findViewById(R.id.highlgpro);
             rela=itemView.findViewById(R.id.rrrr);
             title=itemView.findViewById(R.id.titl);
-            cd=itemView.findViewById(R.id.cdx);
+
         }
     }
 }

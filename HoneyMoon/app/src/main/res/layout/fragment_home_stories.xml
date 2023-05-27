@@ -94,7 +94,9 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/ic_baseline_menu_24"
+                        android:background="@drawable/ic_menu"
+                        android:backgroundTint="@color/bgredy"
+
                         android:visibility="gone">
 
                     </ImageView>

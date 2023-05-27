@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fragment.profile_tags"
-    android:background="@color/red"
-    >
+    tools:context="fragment.profile_tags">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rere"
-        android:layout_below="@+id/funcd">
+       >
 
     </androidx.recyclerview.widget.RecyclerView>
 

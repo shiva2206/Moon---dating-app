@@ -31,7 +31,7 @@
         android:background="@drawable/solidred2"
 
         android:layout_marginRight="10dp"
-        android:padding="10dp"
+        android:padding="7dp"
         android:layout_alignParentRight="true"
 
 

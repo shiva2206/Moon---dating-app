@@ -193,6 +193,8 @@
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_chatsleft.xml" value="0.5" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_chatsright.xml" value="0.25729166666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_comments.xml" value="0.24791666666666667" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_grid.xml" value="0.18541666666666667" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_high.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_image.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_mess.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/adap_nearby.xml" value="0.27291666666666664" />
@@ -211,7 +213,10 @@
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_notify.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_notify_others.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_notify_requests.xml" value="0.27291666666666664" />
-        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_profile.xml" value="0.67" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_profile_highlights.xml" value="0.18229166666666666" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_profile_posts.xml" value="0.1" />
+        <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_profile_tags.xml" value="0.18229166666666666" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/fragment_search.xml" value="0.27291666666666664" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/sty_create.xml" value="0.22" />
         <entry key="..\:/shiva/honey moon app/HoneyMoon/app/src/main/res/layout/sty_login.xml" value="0.27291666666666664" />

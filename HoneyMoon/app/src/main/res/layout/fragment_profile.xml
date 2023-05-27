@@ -29,7 +29,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:src="@drawable/liked"
-                    >
+                    android:visibility="gone">
 
                 </ImageView>
 
@@ -78,7 +78,7 @@
                     android:id="@+id/covimgrel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/solidrect3">
+                   >
 
 
 
@@ -89,42 +89,32 @@
                             android:adjustViewBounds="true"
                             android:elevation="100dp"
                             android:scaleType="centerCrop"
+                            android:background="@drawable/solidrect3"
                             >
 
                         </com.zolad.zoominimageview.ZoomInImageView>
 
 
 
-                    <RelativeLayout
+
+                    <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/covadrl"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentRight="true"
-                        android:elevation="2dp"
+                        android:elevation="100dp"
                         android:padding="9dp"
-                        android:visibility="gone">
+                        android:layout_margin="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:foregroundGravity="center"
+                        android:background="@drawable/ic_menu_camera"
+                        android:backgroundTint="@color/white"
+                        >
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:src="@color/white">
+                    </de.hdodenhof.circleimageview.CircleImageView>
 
-                        </de.hdodenhof.circleimageview.CircleImageView>
-
-                        <ImageView
-                            android:id="@+id/cverad"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:foregroundGravity="center"
-                            android:src="@drawable/ic_menu_camera"
-
-                            >
-
-                        </ImageView>
-                    </RelativeLayout>
 
 
                 </RelativeLayout>
@@ -163,11 +153,11 @@
                     android:layout_below="@+id/vercd"
                     android:padding="10dp">
 
-                    <androidx.cardview.widget.CardView
+                    <RelativeLayout
                         android:id="@+id/prore"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
-                        android:backgroundTint="@color/red"
+
                         app:cardCornerRadius="100dp">
 
                         <de.hdodenhof.circleimageview.CircleImageView
@@ -201,7 +191,7 @@
                         <!--                    </com.zolad.zoominimageview.ZoomInImageView>-->
 
 
-                    </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
 
 
 
@@ -214,9 +204,10 @@
                         android:layout_marginLeft="-20dp"
                         android:layout_marginTop="-25dp"
                         android:layout_toRightOf="@+id/prore"
-                        android:background="@drawable/redfilledcircle"
+                        android:background="@drawable/ic_menu_camera"
+                        android:backgroundTint="@color/bgredy"
                         android:padding="5dp"
-                        android:src="@drawable/ic_menu_camera">
+                        >
 
                     </de.hdodenhof.circleimageview.CircleImageView>
 
@@ -255,6 +246,7 @@
                             android:layout_below="@+id/profuser"
                             android:background="@drawable/redwhitefilled2"
                             android:text="MESSAGE"
+
                             android:textColor="@color/bgredy"
                             android:textSize="13dp">
 
@@ -276,21 +268,14 @@
                         </Button>
 
 
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/edicd"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/profuser"
-                            android:layout_marginTop="8dp"
-                            android:backgroundTint="@color/black"
-                            app:cardCornerRadius="30dp">
 
                             <Button
                                 android:id="@+id/butedits"
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:background="@color/black"
+                                android:background="@drawable/solidred2"
 
+                                android:layout_below="@+id/profuser"
 
                                 android:text="EDIT PROFILE"
                                 android:textColor="@color/white"
@@ -299,29 +284,24 @@
                                 android:visibility="gone">
 
                             </Button>
-                        </androidx.cardview.widget.CardView>
 
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/edicd"
-                            android:layout_marginTop="10dp"
-                            android:backgroundTint="@color/black"
-                            app:cardCornerRadius="30dp">
+
 
                             <Button
                                 android:id="@+id/butsaved"
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:background="@color/black"
+                                android:background="@drawable/solidred2"
+                                android:layout_marginTop="10dp"
                                 android:text="SAVED"
+                                android:layout_below="@+id/butedits"
                                 android:textColor="@color/white"
                                 android:textSize="13dp"
 
                                 android:visibility="gone">
 
                             </Button>
-                        </androidx.cardview.widget.CardView>
+
 
                     </RelativeLayout>
 
@@ -466,7 +446,7 @@
                                 android:layout_centerHorizontal="true"
                                 android:background="@drawable/redwhitefilled"
                                 android:text="FOLLOWERS \n \n  "
-                                android:textColor="@color/white"
+                                android:textColor="@color/bgredy"
                                 android:textSize="13dp">
 
                             </Button>
@@ -475,20 +455,20 @@
 
                             <RelativeLayout
                                 android:layout_width="100dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="70dp"
                                 android:layout_gravity="center"
                                 android:id="@+id/poi"
-                                android:layout_below="@+id/butfollw"
+
                                 android:layout_alignParentRight="true"
                                 android:background="@drawable/redwhitefilled">
 
                                 <Button
                                     android:id="@+id/butmats"
                                     android:layout_width="100dp"
-                                    android:layout_height="40dp"
+                                    android:layout_height="70dp"
                                     android:layout_alignParentRight="true"
                                     android:background="@drawable/nullback"
-                                    android:text="Matches"
+                                    android:text="MATCHES \n \n  "
 
                                     android:textColor="@color/bgredy"
                                     android:textSize="13dp">
@@ -499,11 +479,12 @@
                                     android:id="@+id/matloc"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_below="@+id/butmats"
+
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="-5dp"
                                     android:background="@drawable/whitelock"
                                     android:backgroundTint="@color/bgredy"
+                                    android:layout_alignParentBottom="true"
                                     android:visibility="invisible">
 
                                 </ImageView>
@@ -522,9 +503,9 @@
 
                                 <Button
                                     android:id="@+id/butcru"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Crushs"
+                                    android:layout_width="100dp"
+                                    android:layout_height="70dp"
+                                    android:text="Crushs \n \n"
                                     android:background="@drawable/nullback"
                                     android:textColor="@color/bgredy"
                                     android:textSize="13dp"
@@ -536,9 +517,10 @@
                                     android:id="@+id/cruloc"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_below="@+id/butcru"
+                                    android:layout_alignParentBottom="true"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="-10dp"
+                                    android:visibility="invisible"
                                     android:background="@drawable/whitelock"
                                     android:backgroundTint="@color/bgredy"
 
@@ -553,21 +535,23 @@
 
 
                             <RelativeLayout
-                                    android:layout_below="@+id/follgcd"
+                                    android:layout_below="@+id/butfollw"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginRight="10dp"
-                                    android:layout_gravity="center" android:layout_height="100dp"
-                                    android:layout_width="70dp">
+                                     android:layout_height="70dp"
+                                    android:layout_width="100dp"
+                                    android:id="@+id/zxc"
+                                android:background="@drawable/redwhitefilled">
 
                                     <Button
                                         android:id="@+id/butadm"
                                         android:layout_width="100dp"
-                                        android:layout_height="40dp"
-                                        android:background="@color/black"
-                                        android:text="Admirers"
-                                        android:textColor="@color/white"
+                                        android:layout_height="70dp"
+                                        android:background="@drawable/nullback"
+                                        android:text="Admirers \n \n"
+                                        android:textColor="@color/bgredy"
                                         android:textSize="13dp">
 
                                     </Button>
@@ -576,10 +560,11 @@
                                         android:id="@+id/admloc"
                                         android:layout_width="30dp"
                                         android:layout_height="30dp"
-                                        android:layout_below="@+id/butadm"
                                         android:layout_centerHorizontal="true"
                                         android:layout_marginTop="-5dp"
-                                        android:src="@mipmap/lock"
+                                        android:layout_alignParentBottom="true"
+                                        android:background="@drawable/whitelock"
+                                        android:backgroundTint="@color/bgredy"
                                         android:visibility="invisible">
 
                                     </ImageView>
@@ -588,66 +573,55 @@
 
 
 
-
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/fricd"
-                            android:layout_width="wrap_content"
-                            android:layout_height="70dp"
-                            android:layout_below="@+id/follgcd"
-                            android:layout_alignParentRight="true"
-                            android:layout_marginTop="10dp"
-                            android:backgroundTint="@color/black"
-                            app:cardCornerRadius="30dp">
-
                             <RelativeLayout
                                 android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center">
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_alignParentRight="true"
+                                android:layout_below="@+id/poi"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/rect">
 
                                 <Button
                                     android:id="@+id/butfri"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:background="@color/black"
+                                    android:layout_width="100dp"
+                                    android:layout_height="70dp"
+                                    android:background="@drawable/nullback"
                                     android:text="  "
-                                    android:textColor="@color/white"
-                                    android:textSize="13dp"></Button>
+                                    android:textColor="@color/bgredy"
+                                    android:textSize="13dp">
+
+                                </Button>
 
                                 <ImageView
                                     android:id="@+id/friloc"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
-                                    android:layout_below="@+id/butfri"
+                                    android:layout_alignParentBottom="true"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="-5dp"
-                                    android:src="@mipmap/lock"
+                                    android:background="@drawable/whitelock"
+                                    android:backgroundTint="@color/bgredy"
                                     android:visibility="invisible">
 
                                 </ImageView>
 
                             </RelativeLayout>
 
-                        </androidx.cardview.widget.CardView>
 
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/dummy"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/admcd"
-                            android:layout_marginTop="10dp"
-                            android:background="@color/black"
-                            android:backgroundTint="@color/black"
-                            app:cardCornerRadius="30dp">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/zxc"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/solidred2">
 
                                 <Button
                                     android:id="@+id/butabt"
                                     android:layout_width="match_parent"
                                     android:layout_height="35dp"
-                                    android:background="@color/black"
+                                   android:background="@drawable/nullback"
                                     android:text="ABOUT"
                                     android:textColor="@color/white"
                                     android:textSize="13dp">
@@ -665,10 +639,10 @@
                                         android:id="@+id/butnmeg"
                                         android:layout_width="wrap_content"
                                         android:layout_height="25dp"
-                                        android:background="@color/black"
+                                        android:background="@drawable/nullback"
                                         android:textAlignment="viewStart"
                                         android:textAllCaps="false"
-                                        android:textColor="@color/white">
+                                        >
 
                                     </Button>
 
@@ -679,8 +653,7 @@
                                         android:layout_height="25dp"
                                         android:layout_marginTop="2dp"
                                         android:layout_toRightOf="@+id/butnmeg"
-                                        android:background="@color/black"
-                                        android:textColor="@color/white">
+                                      >
 
                                     </TextView>
 
@@ -689,10 +662,10 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="25dp"
                                         android:layout_below="@+id/butnmeg"
-                                        android:background="@color/black"
+                                        android:background="@drawable/nullback"
                                         android:textAlignment="viewStart"
                                         android:textAllCaps="false"
-                                        android:textColor="@color/white">
+                                        >
 
                                     </Button>
 
@@ -702,12 +675,12 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_below="@+id/butsta"
-                                        android:background="@color/black"
+                                        android:background="@drawable/nullback"
                                         android:maxLines="5"
                                         android:text=""
                                         android:textAlignment="viewStart"
                                         android:textAllCaps="false"
-                                        android:textColor="@color/white">
+                                       >
 
                                     </Button>
 
@@ -716,7 +689,7 @@
 
 
                             </RelativeLayout>
-                        </androidx.cardview.widget.CardView>
+
                     </RelativeLayout>
 
                 </RelativeLayout>
@@ -733,35 +706,28 @@
                         android:layout_marginLeft="-5dp"
                         android:layout_marginRight="-5dp">
 
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/zxc"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:backgroundTint="@color/black"
-                            app:cardCornerRadius="30dp">
+
 
                             <com.google.android.material.tabs.TabLayout
                                 android:id="@+id/tb"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:background="@color/black"
+                                android:background="@drawable/solidred2"
                                 app:tabInlineLabel="true"
                                 app:tabSelectedTextColor="@color/white"
                                 app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
-                                app:tabTextColor="@color/grey">
+                                app:tabTextColor="@color/black">
 
 
                             </com.google.android.material.tabs.TabLayout>
-                        </androidx.cardview.widget.CardView>
+
 
                         <androidx.viewpager.widget.ViewPager
                             android:id="@+id/vpag"
                             android:layout_width="match_parent"
                             android:layout_height="500dp"
-                            android:layout_below="@+id/zxc"
+                            android:layout_below="@+id/tb"
                             android:layout_marginTop="5dp">
 
                         </androidx.viewpager.widget.ViewPager>
