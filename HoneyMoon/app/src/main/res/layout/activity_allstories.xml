@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".allstories"
     android:id="@+id/srl"
-    android:background="@color/red">
+    android:background="@color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,29 +23,25 @@
             android:textSize="20dp">
 
         </TextView>
-        <androidx.cardview.widget.CardView
+
+
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/funcd"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="30dp"
-            >
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/black"
-                android:text="All Stories"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="18dp"
-                android:id="@+id/op">
+            android:background="@drawable/solidred2"
 
-            </Button>
-        </androidx.cardview.widget.CardView>
+            android:text="All Stories"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:id="@+id/op">
+
+        </Button>
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/funcd">
+            android:layout_below="@+id/op">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/gr"
                 android:layout_width="match_parent"
@@ -56,24 +52,21 @@
             </androidx.recyclerview.widget.RecyclerView>
         </androidx.core.widget.NestedScrollView>
 
-        <androidx.cardview.widget.CardView
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="30dp"
-            android:id="@+id/twofuncd"
+            android:text="Next"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_margin="10dp">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Next"
-                android:id="@+id/nex"
-                android:textColor="@color/white"
-                android:background="@color/black">
+            android:layout_margin="10dp"
+            android:id="@+id/nex"
 
-            </Button>
-        </androidx.cardview.widget.CardView>
+            android:textColor="@color/white"
+            android:background="@drawable/solidred2">
+
+        </Button>
+
     </RelativeLayout>
 
 

@@ -6,7 +6,7 @@
     android:layout_centerVertical="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    android:background="@color/red">
+   >
 
     <RelativeLayout
         android:layout_width="match_parent"

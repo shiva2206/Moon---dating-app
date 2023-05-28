@@ -6,296 +6,328 @@
     android:layout_height="match_parent"
     tools:context=".editprof"
     android:id="@+id/srl"
-    android:background="@color/black">
-    <androidx.core.widget.NestedScrollView
+    android:background="@color/white">
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <RelativeLayout
-            android:id="@+id/relativeLayout"
+        <View
+            android:id="@+id/view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="visible"
-            android:gravity="center"
-            android:layout_marginTop="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="180dp"
+            android:transitionName="appp"
+            android:background="@color/bgredy"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/honeytxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/oleo_script_swash_caps_bold"
-                android:text="Honey Moon"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="40dp"
-                android:textStyle="bold"
-                android:layout_centerHorizontal="true"
-                >
-
-            </TextView>
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:id="@+id/profffd"
-                android:layout_below="@+id/honeytxt"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="30dp"
-                android:layout_marginTop="30dp"
-                >
-
-            </de.hdodenhof.circleimageview.CircleImageView>
-            <androidx.cardview.widget.CardView
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/view"
+            android:background="@drawable/wave"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="30dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:id="@+id/usnmecd"
-                android:layout_below="@+id/profffd">
-                <EditText
-                    android:id="@+id/usmes"
+                android:visibility="visible"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/honeytxt"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:paddingLeft="5dp"
-                    android:singleLine="true"
-                    android:hint="Username"
-                    android:textSize="18dp">
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oleo_script_swash_caps_bold"
+                    android:text="Honey Moon"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="40dp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    >
 
-                </EditText>
-            </androidx.cardview.widget.CardView>
+                </TextView>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/profffd"
+                    android:src="@mipmap/moon"
+                    android:layout_below="@+id/honeytxt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"
+                    >
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="30dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:id="@+id/namecd"
-                android:layout_marginTop="5dp"
-                android:layout_below="@+id/usnmecd">
-                <EditText
-                    android:id="@+id/name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:hint="Name"
-                    android:singleLine="true"
-                    android:paddingLeft="5dp"
-                    android:textSize="18dp">
-
-                </EditText>
-            </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/namecd"
-                android:id="@+id/qws"
-                android:layout_centerHorizontal="true">
+                </de.hdodenhof.circleimageview.CircleImageView>
                 <androidx.cardview.widget.CardView
-                    android:layout_width="390dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="30dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/usnmecd"
+
+                    android:layout_below="@+id/profffd">
+                    <EditText
+                        android:id="@+id/usmes"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:background="@drawable/nullback"
+                        android:hint="Username"
+                        android:textSize="18dp">
+
+                    </EditText>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/namecd"
                     android:layout_marginTop="5dp"
-                    android:id="@+id/wwws"
-                    >
-                    <RadioGroup
+                    android:layout_below="@+id/usnmecd">
+                    <EditText
+                        android:id="@+id/name"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
-                        android:orientation="horizontal"
-                        android:id="@+id/showcru"
-                        android:layout_below="@+id/namecd"
-                        android:layout_centerHorizontal="true">
-                        <Button
+                        android:hint="Name"
+                        android:singleLine="true"
+                        android:paddingLeft="5dp"
+                        android:textSize="18dp">
+
+                    </EditText>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/namecd"
+                    android:id="@+id/qws"
+
+                    android:layout_centerHorizontal="true">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="390dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="30dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/wwws"
+
+                        >
+                        <RadioGroup
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
-                            android:text="Status"
-                            android:textAllCaps="false"
-                            android:background="@color/white"
-                            android:textColor="@color/black"
-                            android:textSize="17dp"
-                            android:layout_marginRight="10dp">
+                            android:orientation="horizontal"
+                            android:id="@+id/showcru"
+                            android:layout_below="@+id/namecd"
+                            android:layout_centerHorizontal="true">
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Status"
+                                android:textAllCaps="false"
+                                android:background="@color/white"
+                                android:textColor="@color/black"
+                                android:textSize="17dp"
+                                android:layout_marginRight="10dp">
 
-                        </Button>
-                        <RadioButton
-                            android:layout_width="80dp"
-                            android:layout_height="40dp"
-                            android:background="#F6F6F6"
-                            android:text="Single"
-                            android:id="@+id/sinle"
-                            android:checked="true"
-                            android:buttonTint="@color/black"
-                            >
+                            </Button>
+                            <RadioButton
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/nullback"
+                                android:text="Single"
+                                android:id="@+id/sinle"
+                                android:checked="true"
+                                android:buttonTint="@color/black"
+                                >
 
-                        </RadioButton>
-                        <RadioButton
-                            android:layout_width="110dp"
-                            android:layout_height="40dp"
-                            android:layout_marginLeft="5dp"
-                            android:background="#F6F6F6"
-                            android:text="Commited"
-                            android:id="@+id/commited"
-                            android:buttonTint="@color/black"
-                            >
+                            </RadioButton>
+                            <RadioButton
+                                android:layout_width="110dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/nullback"
+                                android:text="Commited"
+                                android:id="@+id/commited"
+                                android:buttonTint="@color/black"
+                                >
 
-                        </RadioButton>
-                        <RadioButton
-                            android:layout_width="90dp"
-                            android:layout_height="40dp"
-                            android:layout_marginLeft="5dp"
-                            android:background="#F6F6F6"
-                            android:text="Married"
-                            android:id="@+id/married"
-                            android:buttonTint="@color/black">
+                            </RadioButton>
+                            <RadioButton
+                                android:layout_width="90dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/nullback"
+                                android:text="Married"
+                                android:id="@+id/married"
+                                android:buttonTint="@color/black">
 
-                        </RadioButton>
+                            </RadioButton>
 
-                    </RadioGroup>
+                        </RadioGroup>
+
+                    </androidx.cardview.widget.CardView>
+                </HorizontalScrollView>
+
+
+
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    app:cardCornerRadius="30dp"
+                    android:layout_below="@+id/qws"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/abcd">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="About"
+                        android:maxHeight="100dp"
+                        android:id="@+id/edet"
+                        android:textSize="17dp">
+
+                    </EditText>
 
                 </androidx.cardview.widget.CardView>
-            </HorizontalScrollView>
-
-
-
-
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                app:cardCornerRadius="30dp"
-                android:layout_below="@+id/qws"
-                android:layout_marginTop="15dp"
-                android:id="@+id/abcd">
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="About"
-                    android:id="@+id/edet"
-                    android:textSize="17dp">
-
-                </EditText>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="30dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:id="@+id/heitcd"
-                android:layout_below="@+id/abcd"
-                android:layout_marginTop="5dp">
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="35dp"
-                        android:text="Height (cms):"
-
-                        android:textSize="15dp"
-                        android:gravity="center"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="@color/black"
-                        android:layout_marginRight="10dp"></TextView>
-
-
-                    <Spinner
-                        android:id="@+id/height"
-
+                    app:cardCornerRadius="30dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/heitcd"
+                    android:layout_below="@+id/abcd"
+                    android:layout_marginTop="5dp">
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginBottom="-7dp"
-                        android:layout_marginTop="-4dp"
-                        android:background="@android:drawable/btn_dropdown"
-                        android:spinnerMode="dropdown"/>
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="Height (cms):"
 
-                </LinearLayout>
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            android:layout_marginRight="10dp"></TextView>
 
 
-            </androidx.cardview.widget.CardView>
+                        <Spinner
+                            android:id="@+id/height"
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="30dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:id="@+id/weitcd"
-                android:layout_below="@+id/heitcd"
-                android:layout_marginTop="5dp">
-                <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="-7dp"
+                            android:layout_marginTop="-4dp"
+
+                            android:background="@android:drawable/btn_dropdown"
+
+                            android:spinnerMode="dropdown"/>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="35dp"
-                        android:text="Weight (kgs):"
-                        android:textSize="15dp"
-                        android:gravity="center"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="@color/black"
-                        android:layout_marginRight="10dp"></TextView>
-
-
-                    <Spinner
-                        android:id="@+id/weight"
+                    app:cardCornerRadius="30dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/weitcd"
+                    android:layout_below="@+id/heitcd"
+                    android:layout_marginTop="5dp">
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="-7dp"
-                        android:layout_marginTop="-4dp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@android:drawable/btn_dropdown"
-                        android:spinnerMode="dropdown"/>
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:text="Weight (kgs):"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            android:layout_marginRight="10dp"></TextView>
 
-                </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="-7dp"
+                            android:layout_marginTop="-4dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@android:drawable/btn_dropdown"
+
+                            android:spinnerMode="dropdown"/>
+
+                    </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_below="@+id/weitcd"
-                android:layout_marginLeft="50dp"
 
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="50dp"
-                app:cardCornerRadius="30dp">
+
                 <Button
                     android:id="@+id/changes"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="#C3C3C3"
+                    android:background="@drawable/solidred2"
+                    android:layout_below="@+id/weitcd"
+                    android:layout_marginLeft="50dp"
+
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="50dp"
                     android:text="change"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20dp">
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    >
 
                 </Button>
-            </androidx.cardview.widget.CardView>
 
 
 
-        </RelativeLayout>
 
-    </androidx.core.widget.NestedScrollView>
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
 
 
 

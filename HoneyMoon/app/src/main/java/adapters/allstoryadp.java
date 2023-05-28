@@ -9,12 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.honeymoon.R;
@@ -82,8 +81,6 @@ public class allstoryadp extends RecyclerView.Adapter<allstoryadp.holderview> {
                          selectedstalst.add(statmo);
 
                      }
-                 }else{
-                     Toast.makeText(context, holder.cd.getCardBackgroundColor().toString(), Toast.LENGTH_SHORT).show();
                  }
 
 
@@ -116,7 +113,7 @@ public class allstoryadp extends RecyclerView.Adapter<allstoryadp.holderview> {
         private ImageView imgv,chek,alredypree;
         private VideoView vv;
         private TextView tme;
-        private CardView cd;
+        private RelativeLayout cd;
         public holderview(@NonNull View itemView) {
             super(itemView);
 

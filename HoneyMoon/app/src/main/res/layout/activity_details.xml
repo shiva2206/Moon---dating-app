@@ -5,27 +5,23 @@
     android:id="@+id/srl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red"
+    android:background="@color/white"
     tools:context=".details">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/red"
+
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/scd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            app:cardCornerRadius="30dp">
 
-            <androidx.appcompat.widget.Toolbar
+
+        <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
+
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/black"
+                android:background="@drawable/solidred2"
                 android:theme="@style/Theme.AppCompat.Light">
 
                 <TextView
@@ -41,7 +37,7 @@
                 </TextView>
 
             </androidx.appcompat.widget.Toolbar>
-        </androidx.cardview.widget.CardView>
+
 
         <RelativeLayout
             android:id="@+id/tp"
@@ -107,13 +103,14 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
+            <RelativeLayout
                 android:id="@+id/depro"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_below="@+id/funcd"
                 android:layout_marginLeft="10dp"
-                android:background="@color/red"
+
+
                 android:elevation="100dp"
                 app:cardCornerRadius="70dp">
 
@@ -121,7 +118,7 @@
                     android:id="@+id/bcim"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/black"></de.hdodenhof.circleimageview.CircleImageView>
+                    ></de.hdodenhof.circleimageview.CircleImageView>
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/cfg"
@@ -133,9 +130,11 @@
 
                 </de.hdodenhof.circleimageview.CircleImageView>
 
-            </androidx.cardview.widget.CardView>
+            </RelativeLayout>
 
-            <androidx.cardview.widget.CardView
+
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/funcd"
@@ -143,56 +142,48 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/depro"
-                android:elevation="100dp"
-                app:cardCornerRadius="30dp">
+                android:padding="10dp">
 
-                <RelativeLayout
+                <Button
+                    android:id="@+id/deusrnme"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/red"
-                    android:elevation="100dp"
-                    android:padding="10dp">
+                    android:layout_height="30dp"
+                    android:background="@drawable/nullback"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textSize="18dp"
+                    android:textStyle="bold">
 
-                    <Button
-                        android:id="@+id/deusrnme"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:background="@color/red"
-                        android:singleLine="true"
-                        android:textAlignment="viewStart"
-                        android:textAllCaps="false"
-                        android:textSize="18dp"
-                        android:textStyle="bold">
+                </Button>
 
-                    </Button>
+                <Button
+                    android:id="@+id/destats"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/deusrnme"
+                    android:background="@drawable/nullback"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textSize="15dp">
 
-                    <Button
-                        android:id="@+id/destats"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_below="@+id/deusrnme"
-                        android:background="@color/red"
-                        android:singleLine="true"
-                        android:textAlignment="viewStart"
-                        android:textAllCaps="false"
-                        android:textSize="15dp">
+                </Button>
 
-                    </Button>
+                <TextView
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/destats"
+                    android:background="@drawable/nullback"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textSize="12dp">
 
-                    <TextView
-                        android:id="@+id/line"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_below="@+id/destats"
-                        android:background="@color/red"
-                        android:textAlignment="viewStart"
-                        android:textAllCaps="false"
-                        android:textSize="12dp">
+                </TextView>
 
-                    </TextView>
+            </RelativeLayout>
 
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
 
             <RelativeLayout
                 android:id="@+id/bcmu"
@@ -202,32 +193,28 @@
                 android:elevation="100dp"
                 android:padding="10dp">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/blockcd"
+
+
+                <Button
+                    android:id="@+id/block"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="30dp">
+                    android:layout_height="40dp"
+                    android:background="@drawable/redwhitefilled2"
+                    android:text="Block Contact"
+                    android:textColor="@color/bgredy"
 
-                    <Button
-                        android:id="@+id/block"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:background="@color/red"
-                        android:text="Block Contact"
-                        android:textColor="@color/black"
+                    >
 
-                        >
-
-                    </Button>
-                </androidx.cardview.widget.CardView>
+                </Button>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/mutecd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/blockcd"
+                    android:layout_below="@+id/block"
                     android:layout_marginTop="5dp"
-                    app:cardCornerRadius="30dp">
+                    app:cardCornerRadius="30dp"
+                    android:visibility="gone">
 
                     <Button
                         android:id="@+id/mute"
@@ -256,9 +243,9 @@
                         android:layout_width="match_parent"
 
                         android:layout_height="40dp"
-                        android:background="@color/black"
+                        android:background="@drawable/solidred2"
                         app:tabInlineLabel="true"
-                        app:tabSelectedTextColor="@color/white"
+                        app:tabSelectedTextColor="@color/black"
                         app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
                         app:tabTextColor="@color/grey">
 
