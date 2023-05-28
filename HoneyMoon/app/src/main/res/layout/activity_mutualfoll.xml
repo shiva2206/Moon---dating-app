@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".mutualfoll"
     android:id="@+id/srl"
-    android:background="@color/red">
+    >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <androidx.cardview.widget.CardView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/funcd"
             app:cardCornerRadius="30dp"
             android:layout_margin="5dp"
-            android:backgroundTint="@color/black">
+            android:background="@drawable/solidred2">
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
             </RelativeLayout>
 
 
-        </androidx.cardview.widget.CardView>
+        </RelativeLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

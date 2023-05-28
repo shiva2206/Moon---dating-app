@@ -21,45 +21,38 @@
     </TextView>
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="43dp"
-        android:backgroundTint="@color/black"
-        app:cardCornerRadius="30dp"
-        android:id="@+id/app"
-        android:layout_margin="7dp"
-        android:layout_marginTop="5dp">
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
 
-            android:background="@color/black"
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/abl"
+            android:layout_margin="4dp"
+            android:background="@drawable/redwhitefilled2"
             >
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                >
+                android:layout_margin="2dp"
+                android:background="@drawable/nullback"
+                android:theme="@style/noeffectcustomtb">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/searwht"
-                        android:id="@+id/ser">
 
-                    </ImageView>
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/ser"
                         android:hint="Search"
-                        android:textColorHint="@color/white"
+                        style="@style/NoUnderlineEditText"
+                        app:drawableStartCompat="@drawable/search"
+                        android:textColorHint="@color/grey"
                         android:textSize="15dp"
+                        android:background="@drawable/nullback"
                         android:id="@+id/etx"
                         android:singleLine="true"
-                        android:textColor="@color/white"
-                        android:background="@color/black">
+
+                        >
 
                     </EditText>
 
@@ -67,12 +60,12 @@
 
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
-    </androidx.cardview.widget.CardView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/app"
+        android:layout_below="@+id/abl"
         android:id="@+id/urecy"
         android:visibility="invisible"
         android:layout_marginBottom="10dp">
