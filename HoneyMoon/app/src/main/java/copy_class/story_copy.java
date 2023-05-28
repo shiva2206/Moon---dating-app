@@ -43,12 +43,12 @@ public class story_see extends AppCompatActivity {
 
 
     private String highid,type,userid;
-//    private List<statusmodel> stalst;
+    //    private List<statusmodel> stalst;
     private List<statusmodel> statodel;
-//    private List<Integer> countlst = new ArrayList<>();
+    //    private List<Integer> countlst = new ArrayList<>();
     private List<highmodel> highlst;
     private List<String> userlst,mainuserlst;
-//    public story_seeadp adp;
+    //    public story_seeadp adp;
     private NetworkChangeListener networkChangeListener = new NetworkChangeListener();
     private List<String> dalst,strstalst,strhighlst;
     private int p=0;
@@ -61,7 +61,7 @@ public class story_see extends AppCompatActivity {
     private CardView topp;
     private RelativeLayout bott;
     private ImageView usrprof, send, annocru, annofri, annoadm, himen, imgg;
-//    private ViewPager2 viewp;
+    //    private ViewPager2 viewp;
     private EditText reply;
     private View left, right;
     private StoriesProgressView spv;
@@ -151,12 +151,12 @@ public class story_see extends AppCompatActivity {
 
             bundle.remove("p");
 
-//            for(String ky : bundle.keySet()){
-//
-//                    mainuserlst.add(ky);
-//
-//            }
-//            p=mainuserlst.indexOf(userid);
+            for(String ky : bundle.keySet()){
+
+                mainuserlst.add(ky);
+
+            }
+            p=mainuserlst.indexOf(userid);
             getuser();
         }else{
 //            highid= bundle.get("highlightid")+"";
@@ -164,8 +164,8 @@ public class story_see extends AppCompatActivity {
 
 
             for(String ky : bundle.keySet()){
-               mainuserlst.add(userid);
-               strhighlst.add(bundle.get(ky)+"");
+                mainuserlst.add(userid);
+                strhighlst.add(bundle.get(ky)+"");
 
 
 
@@ -202,7 +202,7 @@ public class story_see extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 topp.setEnabled(false);
-                Intent tent = new Intent(com.example.honeymoon.story_see.this, Mainactivity.class);
+                Intent tent = new Intent(story_see.this, Mainactivity.class);
                 tent.putExtra("userid", userid);
                 startActivity(tent);
                 topp.setEnabled(true);
@@ -213,9 +213,9 @@ public class story_see extends AppCompatActivity {
             public void onClick(View v) {
                 seevw.setEnabled(false);
                 if (highid == null) {
-                    startActivity(new Intent(com.example.honeymoon.story_see.this, com.example.honeymoon.view.class));
+                    startActivity(new Intent(story_see.this, com.example.honeymoon.view.class));
                 } else {
-                    Intent ient = new Intent(com.example.honeymoon.story_see.this, seen.class);
+                    Intent ient = new Intent(story_see.this, seen.class);
 ///check                    ient.putExtra("date", strstalst.get(counter).getTime().substring(0, 10));
                     ient.putExtra("purpose", "allstories");
                     startActivity(ient);
@@ -423,7 +423,7 @@ public class story_see extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                   userlst.clear();
+                userlst.clear();
 //                   stalstlst.clear();
 //                   uriList.clear();
 //                   countlst.clear();
@@ -477,7 +477,7 @@ public class story_see extends AppCompatActivity {
 //                   adp.notifyDataSetChanged();
 
             }
-//
+            //
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 

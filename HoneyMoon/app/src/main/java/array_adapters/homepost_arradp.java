@@ -4,8 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.media.Image;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -16,12 +14,10 @@ import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 
 import com.example.honeymoon.Mainactivity;
 import com.example.honeymoon.R;
@@ -37,8 +33,6 @@ import com.hendraanggrian.appcompat.widget.SocialEditText;
 import com.hendraanggrian.appcompat.widget.SocialTextView;
 import com.hendraanggrian.appcompat.widget.SocialView;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
 
 import java.text.DateFormat;
 import java.util.Date;

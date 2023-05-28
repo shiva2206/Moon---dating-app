@@ -11,5 +11,10 @@
     <style name="NoUnderlineEditText" parent="Widget.AppCompat.EditText">
         <item name="android:background">@null</item>
     </style>
+    <style name="noeffectcustomtb">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:theme">@android:style/ThemeOverlay.Material.ActionBar</item>
+
+    </style>
 
 </resources>
