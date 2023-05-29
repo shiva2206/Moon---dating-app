@@ -230,18 +230,13 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/tbcd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/mutecd"
-                    android:layout_marginTop="5dp"
-                    app:cardCornerRadius="30dp">
+
 
                     <com.google.android.material.tabs.TabLayout
                         android:id="@+id/tbbb"
                         android:layout_width="match_parent"
-
+                        android:layout_below="@+id/mutecd"
+                        android:layout_marginTop="5dp"
                         android:layout_height="40dp"
                         android:background="@drawable/solidred2"
                         app:tabInlineLabel="true"
@@ -250,14 +245,14 @@
                         app:tabTextColor="@color/grey">
 
                     </com.google.android.material.tabs.TabLayout>
-                </androidx.cardview.widget.CardView>
+
 
 
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/vvpag"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@+id/tbcd"
+                    android:layout_below="@+id/tbbb"
                     android:layout_marginTop="5dp">
 
                 </androidx.viewpager.widget.ViewPager>

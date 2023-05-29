@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".addstory"
-    android:background="@color/red">
+    tools:context=".addstory">
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,25 +20,18 @@
     </TextView>
 
 
-    <androidx.cardview.widget.CardView
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/cd"
-        app:cardCornerRadius="30dp"
-        android:backgroundTint="@color/black"
-        android:layout_margin="10dp">
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/black"
-            android:text="Selected Image"
-            android:textSize="15dp"
+        android:background="@drawable/solidred2"
+        android:text="Selected Image"
+        android:textSize="15dp"
 
-            android:textColor="@color/white"
-            android:id="@+id/openGalleryButton"
-            android:layout_alignParentTop="true"
-            />
-    </androidx.cardview.widget.CardView>
+        android:textColor="@color/white"
+        android:id="@+id/openGalleryButton"
+        android:layout_alignParentTop="true"
+        />
 
 
 
@@ -48,7 +40,7 @@
         android:layout_height="match_parent"
         android:id="@+id/mainImageView"
         android:adjustViewBounds="true"
-        android:layout_below="@+id/cd"
+        android:layout_below="@id/openGalleryButton"
         android:layout_alignParentBottom="true"
         android:layout_margin="10dp"
         />
