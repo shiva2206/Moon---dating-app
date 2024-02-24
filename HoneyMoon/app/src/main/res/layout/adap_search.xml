@@ -150,7 +150,8 @@
             android:layout_height="30dp"
             android:layout_below="@+id/hnae"
             android:textColor="@color/white"
-            android:textSize="15dp">
+            android:textSize="15dp"
+            >
 
         </TextView>
 
@@ -160,6 +161,7 @@
             android:layout_height="30dp"
             android:layout_below="@+id/stats"
             android:layout_marginLeft="10dp"
+
             android:layout_toRightOf="@id/hnae"
 
 
@@ -174,7 +176,7 @@
             android:layout_height="30dp"
             android:layout_above="@+id/dists"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="-4dp"
+
             android:layout_toRightOf="@id/hnae"
 
             android:textColor="@color/white"
