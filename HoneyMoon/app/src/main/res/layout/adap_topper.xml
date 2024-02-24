@@ -3,12 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/red"
+    android:background="@color/white"
     >
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
+
         android:id="@+id/cdmess"
         android:elevation="100dp"
         app:cardCornerRadius="30dp"
@@ -18,7 +18,8 @@
             android:id="@+id/messrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:background="@drawable/solidrect">
             <TextView
                 android:layout_width="20dp"
                 android:layout_height="wrap_content"
@@ -33,7 +34,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/white"
                 app:cardCornerRadius="100dp"
                 android:layout_toRightOf="@id/lp"
                 android:layout_centerVertical="true"
@@ -41,7 +42,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/black"
+                    android:background="@color/white"
                     android:id="@+id/cardview">
 
                 </de.hdodenhof.circleimageview.CircleImageView>

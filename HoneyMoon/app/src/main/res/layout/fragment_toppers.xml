@@ -5,15 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="fragment.toppers"
     android:id="@+id/srl"
-    android:background="@color/red">
+    android:background="@color/white">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/red">
+        android:background="@color/white">
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/black"
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="3dp"
@@ -24,8 +23,8 @@
                 android:layout_height="wrap_content"
                 android:text="Toppers"
                 android:textSize="14dp"
-                android:textColor="@color/white"
-                android:background="@color/black">
+                android:textColor="@color/red"
+                android:background="@drawable/redwhitefilled">
 
             </Button>
 
