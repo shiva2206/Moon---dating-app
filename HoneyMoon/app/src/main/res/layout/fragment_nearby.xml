@@ -35,13 +35,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text=""
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="15dp"
                 android:gravity="center"
                 android:id="@+id/nby"
 
                 android:layout_margin="5dp"
-                android:background="@color/black">
+                >
 
             </TextView>
 
@@ -61,6 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/distsekbr"
             android:id="@+id/qwe">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,8 +79,7 @@
                         android:orientation="horizontal"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
-                        android:layout_marginRight="10dp"
-                        android:backgroundTint="@color/red">
+                        android:layout_marginRight="10dp">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -97,7 +97,6 @@
                             android:paddingRight="10dp"
                             android:buttonTint="@color/black"
 
-                            android:backgroundTint="@color/red"
                             android:text="Male">
 
                         </RadioButton>
@@ -106,7 +105,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="#F6F6F6"
-                            android:backgroundTint="@color/red"
                             android:buttonTint="@color/black"
                             android:paddingRight="10dp"
                             android:text="Female">
@@ -118,7 +116,6 @@
                             android:layout_height="wrap_content"
                             android:background="#F6F6F6"
                             android:checked="true"
-                            android:backgroundTint="@color/red"
                             android:buttonTint="@color/black"
                             android:paddingRight="10dp"
                             android:text="Show All"></RadioButton>
@@ -154,7 +151,6 @@
                             android:text="Single"
                             android:id="@+id/sinle"
                             android:paddingRight="10dp"
-                            android:backgroundTint="@color/red"
                             android:buttonTint="@color/black"
                             >
 
@@ -166,7 +162,6 @@
                             android:text="Commited"
                             android:id="@+id/commited"
                             android:paddingRight="10dp"
-                            android:backgroundTint="@color/red"
                             android:buttonTint="@color/black"
                             >
 
@@ -177,7 +172,6 @@
                             android:paddingRight="10dp"
                             android:background="#F6F6F6"
                             android:text="Married"
-                            android:backgroundTint="@color/red"
                             android:id="@+id/married"
                             android:buttonTint="@color/black">
 
@@ -189,7 +183,6 @@
                             android:background="#F6F6F6"
                             android:paddingRight="10dp"
                             android:text="All"
-                            android:backgroundTint="@color/red"
                             android:id="@+id/sallr"
                             android:buttonTint="@color/black">
 
@@ -263,10 +256,10 @@
                 android:id="@+id/ser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#C3C3C3"
+                android:background="@drawable/solidrect"
                 android:text="Search"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:padding="5dp">
 

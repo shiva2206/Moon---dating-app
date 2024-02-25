@@ -59,6 +59,7 @@ public class notify extends Fragment {
         return view;
     }
     public void seet(){
+        fralst.clear();
         fralst.add(new notify_others());
         fralst.add(new notify_requests());
 
@@ -70,6 +71,8 @@ public class notify extends Fragment {
         adp =new fragadp(getChildFragmentManager(),fralst,titlst);
         vp.setAdapter(adp);
         tb.setupWithViewPager(vp);
+
+
     }
 
 }

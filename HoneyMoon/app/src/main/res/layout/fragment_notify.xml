@@ -35,7 +35,7 @@
             app:tabTextColor="@color/bgredy"
             app:tabSelectedTextColor="@color/black"
             app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
-            android:background="@drawable/redwhitefilled2">
+            >
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -44,7 +44,7 @@
         <androidx.viewpager.widget.ViewPager
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/seccd"
+            android:layout_below="@+id/tably"
             android:id="@+id/vpage">
 
         </androidx.viewpager.widget.ViewPager>

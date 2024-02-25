@@ -26,6 +26,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -241,7 +242,49 @@ public class login extends AppCompatActivity {
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(login.this, e+"", Toast.LENGTH_SHORT).show();
+                            if (e instanceof FirebaseAuthException) {
+                                FirebaseAuthException firebaseAuthException = (FirebaseAuthException) e;
+                                String errorCode = firebaseAuthException.getErrorCode();
+                                String errorMessage;
+                                switch (errorCode) {
+                                    case "ERROR_INVALID_CUSTOM_TOKEN":
+                                        errorMessage = "The custom token format is incorrect.";
+                                        break;
+                                    case "ERROR_CUSTOM_TOKEN_MISMATCH":
+                                        errorMessage = "The custom token corresponds to a different audience.";
+                                        break;
+                                    case "ERROR_INVALID_CREDENTIAL":
+                                        errorMessage = "The supplied auth credential is malformed or has expired.";
+                                        break;
+                                    case "ERROR_INVALID_EMAIL":
+                                        errorMessage = "The email address is badly formatted.";
+                                        break;
+                                    case "ERROR_WRONG_PASSWORD":
+                                        errorMessage = "The password is invalid or the user does not have a password.";
+                                        break;
+                                    case "ERROR_USER_MISMATCH":
+                                        errorMessage = "The supplied credentials do not correspond to the previously signed in user.";
+                                        break;
+                                    case "ERROR_USER_NOT_FOUND":
+                                        errorMessage = "There is no user record corresponding to this identifier. The user may have been deleted.";
+                                        break;
+                                    case "ERROR_USER_DISABLED":
+                                        errorMessage = "The user account has been disabled by an administrator.";
+                                        break;
+                                    case "ERROR_TOO_MANY_REQUESTS":
+                                        errorMessage = "Too many requests. Try again later.";
+                                        break;
+                                    case "ERROR_OPERATION_NOT_ALLOWED":
+                                        errorMessage = "This operation is not allowed. You must enable this service in the console.";
+                                        break;
+                                    default:
+                                        errorMessage = "Authentication failed: " + firebaseAuthException.getMessage();
+                                }
+                                Toast.makeText(login.this, errorMessage, Toast.LENGTH_SHORT).show();
+                            } else {
+                                // Handle generic exception
+                                Toast.makeText(login.this, "Authentication failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
                         }
                     });
 

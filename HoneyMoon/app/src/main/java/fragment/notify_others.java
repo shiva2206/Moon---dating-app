@@ -51,6 +51,7 @@ public class notify_others extends Fragment {
         dview.setAdapter(adp);
         dview.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        getnotify();
         return view;
     }
     public void getnotify(){
