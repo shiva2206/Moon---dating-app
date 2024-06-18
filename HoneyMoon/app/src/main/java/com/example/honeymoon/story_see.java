@@ -531,6 +531,13 @@ public class story_see extends AppCompatActivity {
                         }
                     });
         }
+
+        /*
+
+        getstory()
+        This helps in getiing all the currnt stories and put it in a list
+        also deletes the story which become older
+         */
         public void getstory(){
           FirebaseDatabase.getInstance().getReference().child("info").child(userid).child("story").addListenerForSingleValueEvent(new ValueEventListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
@@ -583,6 +590,11 @@ public class story_see extends AppCompatActivity {
             }
         });
     }
+
+    /*
+    setstoryseen()
+    This is used to set the setory whoa are all seen
+     */
     public void setstoryseen(statusmodel stadel) {
         FirebaseDatabase.getInstance().getReference().child("info").addListenerForSingleValueEvent(new ValueEventListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
