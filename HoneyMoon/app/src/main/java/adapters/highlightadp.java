@@ -67,9 +67,10 @@ public class highlightadp extends RecyclerView.Adapter<highlightadp.vie>{
                     Intent inte = new Intent(context, story_see.class);
                     inte.putExtra("userid",userid);
                     inte.putExtra("highid",hg.getHighlightid());
-                    for(highmodel hmdl : highlst){
-                        inte.putExtra(hmdl.getHighlightid(),"g");
-                    }
+                    inte.putExtra("type","highlight");
+//                    for(highmodel hmdl : highlst){
+//                        inte.putExtra(hmdl.getHighlightid(),"g");
+//                    }
                     context.startActivity(inte);
                 }
                 holder.rela.setEnabled(true);

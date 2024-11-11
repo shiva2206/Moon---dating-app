@@ -62,7 +62,7 @@ public class story_see extends AppCompatActivity {
     long pressTime=0L;
     long limit =500L;
     public TextView username,title,seevw;
-
+    public List<statusmodel> statlst = new ArrayList<>();
     public RelativeLayout bott,topp;
     public ImageView usrprof,send,annocru,annofri,annoadm,himen,imgg;
 //    public ViewPager2 viewp;
@@ -70,8 +70,8 @@ public class story_see extends AppCompatActivity {
     public View left,right;
     public StoriesProgressView spv;
     public int counter=0;
-    public List<statusmodel> statlst;
-    public List<highmodel> highlst;
+
+    public highmodel highmdl;
     public List<String> dalst,strstalst;
     public View.OnTouchListener onTouchListener = new View.OnTouchListener() {
         @Override
@@ -122,7 +122,7 @@ public class story_see extends AppCompatActivity {
 //        viewp=findViewById(R.id.viewpa);
 
 //        stalst=new ArrayList<>();
-        highlst = new ArrayList<>();
+
 
 
         Bundle bundle = getIntent().getExtras();
@@ -149,7 +149,7 @@ public class story_see extends AppCompatActivity {
         }
         getuserdet();
 
-
+        spv.setStoryDuration(5000L);
         if (type == null) {
             statlst = new ArrayList<>();
             getstory();
@@ -160,26 +160,17 @@ public class story_see extends AppCompatActivity {
             } else {
                 himen.setVisibility(GONE);
             }
-            highlst=new ArrayList<>();
+            highid = bundle.getString("highid");
+            bundle.remove("highid");
+
             dalst=new ArrayList<>();
             strstalst=new ArrayList<>();
             gethigh();
 
 
-            highmodel hgdl = highlst.get(counter);
-            spv.setStoriesCount(highlst.size());
+
 //            spv.pause();
-            Picasso.get().load(hgdl.getImageuri()).into(imgg, new Callback() {
-                @Override
-                public void onSuccess() {
-                    spv.resume();
-                }
 
-                @Override
-                public void onError(Exception e) {
-
-                }
-            });
 
             if (userid.equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
                 himen.setVisibility(View.VISIBLE);
@@ -226,7 +217,7 @@ public class story_see extends AppCompatActivity {
                     vp.put("chat", reply.getText() + "");
                     vp.put("liked", "false");
                     if (type != null) {
-                        vp.put("uri", highlst.get(counter).getImageuri());
+                        vp.put("uri", highmdl.getImageuri());
                     } else {
                         vp.put("uri", statlst.get(counter).getUri());
                     }
@@ -243,7 +234,7 @@ public class story_see extends AppCompatActivity {
                     mp.put("liked", "false");
                     mp.put("type", "story");
                     if (type != null) {
-                        mp.put("uri", highlst.get(counter).getImageuri());
+                        mp.put("uri", highmdl.getImageuri());
                     } else {
                         mp.put("uri", statlst.get(counter).getUri());
                     }
@@ -280,13 +271,13 @@ public class story_see extends AppCompatActivity {
                         switch (item.getItemId()) {
                             case R.id.adsto:
                                 Intent intte = new Intent(story_see.this, allstories.class);
-                                intte.putExtra("highid", highlst.get(counter).getHighlightid());
+                                intte.putExtra("highid", highmdl.getHighlightid());
                                 startActivity(intte);
                                 break;
 
                             case R.id.edddit:
                                 Intent intet = new Intent(story_see.this, addhighlight.class);
-                                intet.putExtra("highid", highlst.get(counter).getHighlightid());
+                                intet.putExtra("highid", highmdl.getHighlightid());
                                 intet.putExtra("from", "edit");
                                 startActivity(intet);
                                 break;
@@ -303,17 +294,17 @@ public class story_see extends AppCompatActivity {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
 
-                                                if (highlst.size() == 1) {
+//                                                if (highlst.size() == 1) {
                                                     FirebaseStorage.getInstance().getReference().child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("highlights")
-                                                            .child(highlst.get(counter).getHighlightid()).delete();
+                                                            .child(highmdl.getHighlightid()).delete();
                                                     FirebaseDatabase.getInstance().getReference().child("info").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                                            .child("highlights").child(highlst.get(counter).getHighlightid()).removeValue();
+                                                            .child("highlights").child(highmdl.getHighlightid()).removeValue();
                                                     ((Activity) story_see.this).finish();
-                                                } else {
-                                                    FirebaseDatabase.getInstance().getReference().child("info").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                                            .child("highlights").child(highlst.get(counter).getHighlightid()).child("statusmodelist").child(statlst.get(counter).getStatusid()).removeValue();
-
-                                                }
+//                                                } else {
+//                                                    FirebaseDatabase.getInstance().getReference().child("info").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+//                                                            .child("highlights").child(highlst.get(counter).getHighlightid()).child("statusmodelist").child(statlst.get(counter).getStatusid()).removeValue();
+//
+//                                                }
 
                                             }
                                         }).show();
@@ -339,8 +330,8 @@ public class story_see extends AppCompatActivity {
         seevw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                seevw.setEnabled(false);
-                if (highlst == null) {
+//                seevw.setEnabled(false);
+                if (highmdl == null) {
                     (story_see.this).startActivity(new Intent(story_see.this, com.example.honeymoon.view.class));
                 } else {
                     Intent ient = new Intent(story_see.this, seen.class);
@@ -358,12 +349,10 @@ public class story_see extends AppCompatActivity {
                 Toast.makeText(story_see.this, counter + "", Toast.LENGTH_SHORT).show();
                 if(counter +1>=statlst.size()) return;
                 counter++;
-                if (type==null) {
 
-                    Picasso.get().load(statlst.get(counter).getUri()).into(imgg);
-                } else {
-                    Picasso.get().load(highlst.get(counter).getImageuri()).into(imgg);
-                }
+
+                Picasso.get().load(statlst.get(counter).getUri()).into(imgg);
+
                 setstoryseen(statlst.get(counter));
             }
 
@@ -382,7 +371,7 @@ public class story_see extends AppCompatActivity {
                     Picasso.get().load(statlst.get(counter).getUri()).into(imgg);
                 } else {
 
-                    Picasso.get().load(highlst.get(counter).getImageuri()).into(imgg);
+                    Picasso.get().load(highmdl.getImageuri()).into(imgg);
 
                 }
             }
@@ -443,10 +432,11 @@ public class story_see extends AppCompatActivity {
 //                countlst.clear();
                 dalst.clear();
                 for(DataSnapshot df : snapshot.getChildren()){
+                    Toast.makeText(story_see.this, df.getKey()+"", Toast.LENGTH_SHORT).show();
                     if(df.getKey().equals(highid)){
                         highmodel ghb = df.getValue(highmodel.class);
 //                        title.setText(ghb.getTitle());
-
+                        highmdl = ghb;
                         if(ghb.getStatusmodelist() != null) {
 
                             for (String sta : ghb.getStatusmodelist().keySet()) {
@@ -479,7 +469,7 @@ public class story_see extends AppCompatActivity {
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
 
 //                        uriList.clear();
-                            List<statusmodel> stalst = new ArrayList<>();
+                            statlst.clear();
                             List<String> orddalst = new ArrayList<>();
                             List<statusmodel> unordstalst = new ArrayList<>();
                             for (int u = 0; u < strstalst.size(); u++) {
@@ -492,14 +482,14 @@ public class story_see extends AppCompatActivity {
                             }
                             for (String das : effecy.instance.getdalst(orddalst)) {
                                 for (statusmodel stdell : unordstalst) {
-                                    if (stdell.getTime().equals(das) && !stalst.contains(stdell)) {
-                                        stalst.add(stdell);
+                                    if (stdell.getTime().equals(das) && !statlst.contains(stdell)) {
+                                        statlst.add(stdell);
 
                                         break;
                                     }
                                 }
                             }
-                            spv.setStoriesCount(stalst.size());
+                            spv.setStoriesCount(statlst.size());
 //                        countlst.add(0);
 //                        stalst.add(stalst);
 //                        if (stalst.isEmpty()){
@@ -507,6 +497,19 @@ public class story_see extends AppCompatActivity {
 //                        }
 //                        getindi(pp);
 //                        adp.notifyDataSetChanged();
+
+                            spv.setStoriesCount(statlst.size());
+                            Picasso.get().load(highmdl.getImageuri()).into(imgg, new Callback() {
+                                @Override
+                                public void onSuccess() {
+                                    spv.resume();
+                                }
+
+                                @Override
+                                public void onError(Exception e) {
+
+                                }
+                            });
 
                         }
 
@@ -582,7 +585,7 @@ public class story_see extends AppCompatActivity {
 
                     }
                 });
-                spv.setStoryDuration(5000L);
+
 
                 spv.startStories(counter);
             }
