@@ -745,8 +745,8 @@ public class effecy {
 
                 } else {
                     bcimg.setTag("no");
-//                    bcimg.setBackgroundColor(Color.parseColor("#000000"));
-                    bcimg.setBackgroundResource(R.drawable.pinksolidcircle);
+                    bcimg.setBackgroundResource(R.drawable.blacksolidcircle);
+//                    bcimg.setBackgroundResource(R.drawable.pinksolidcircle);
                 }
             }
 

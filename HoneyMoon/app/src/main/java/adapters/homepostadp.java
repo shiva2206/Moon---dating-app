@@ -215,7 +215,7 @@ public class homepostadp extends RecyclerView.Adapter<homepostadp.viewholder> {
             public void onClick(View v) {
                 holder.bcg.setEnabled(false);
                 Intent inte = new Intent(context, story_see.class);
-                inte.putExtra(pl.getPublisherid(), pl.getPublisherid());
+                inte.putExtra("userid", pl.getPublisherid());
                 context.startActivity(inte);
                 holder.bcg.setEnabled(true);
             }

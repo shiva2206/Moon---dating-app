@@ -4,7 +4,6 @@ import static android.view.View.GONE;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -73,7 +72,6 @@ public class story_see extends AppCompatActivity {
     public int counter=0;
     public List<statusmodel> statlst;
     public List<highmodel> highlst;
-    public Context context;
     public List<String> dalst,strstalst;
     public View.OnTouchListener onTouchListener = new View.OnTouchListener() {
         @Override
@@ -155,21 +153,7 @@ public class story_see extends AppCompatActivity {
         if (type == null) {
             statlst = new ArrayList<>();
             getstory();
-            statusmodel stadel = statlst.get(counter);
-            spv.setStoriesCount(statlst.size());
-//            Toast.makeText(context, , Toast.LENGTH_SHORT).show();
-            setstoryseen(stadel);
-            Picasso.get().load(stadel.getUri()).into(imgg, new Callback() {
-                @Override
-                public void onSuccess() {
-                    spv.resume();
-                }
 
-                @Override
-                public void onError(Exception e) {
-
-                }
-            });
         } else {
             if (userid.equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
                 himen.setVisibility(View.VISIBLE);
@@ -204,9 +188,9 @@ public class story_see extends AppCompatActivity {
             }
 
         }
-        spv.setStoryDuration(5000L);
-//        Activity act =
-        spv.startStories(counter);
+//        spv.setStoryDuration(5000L);
+////        Activity act =
+//        spv.startStories(counter);
 
 
         left.setOnClickListener(new View.OnClickListener() {
@@ -271,12 +255,12 @@ public class story_see extends AppCompatActivity {
                             .child(id).setValue(mp);
 
 
-                    effecy.instance.sendnotii(context, userid, reply.getText() + "", "message", null, FirebaseAuth.getInstance().getCurrentUser().getUid(), null);
+                    effecy.instance.sendnotii(story_see.this, userid, reply.getText() + "", "message", null, FirebaseAuth.getInstance().getCurrentUser().getUid(), null);
 
 
                     reply.setText("");
                 } else if (send.getTag().equals("blocked")) {
-                    Toast.makeText(context, "You have been Blocked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(story_see.this, "You have been Blocked", Toast.LENGTH_SHORT).show();
                 }
                 send.setEnabled(true);
 //                viewp.setEnabled(true);
@@ -287,7 +271,7 @@ public class story_see extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 himen.setEnabled(false);
-                PopupMenu pmen = new PopupMenu(context, himen);
+                PopupMenu pmen = new PopupMenu(story_see.this, himen);
                 pmen.getMenuInflater().inflate(R.menu.del, pmen.getMenu());
                 pmen.show();
                 pmen.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -295,19 +279,19 @@ public class story_see extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.adsto:
-                                Intent intte = new Intent(context, allstories.class);
+                                Intent intte = new Intent(story_see.this, allstories.class);
                                 intte.putExtra("highid", highlst.get(counter).getHighlightid());
-                                (context).startActivity(intte);
+                                startActivity(intte);
                                 break;
 
                             case R.id.edddit:
-                                Intent intet = new Intent(context, addhighlight.class);
+                                Intent intet = new Intent(story_see.this, addhighlight.class);
                                 intet.putExtra("highid", highlst.get(counter).getHighlightid());
                                 intet.putExtra("from", "edit");
-                                (context).startActivity(intet);
+                                startActivity(intet);
                                 break;
                             case R.id.remhigh:
-                                AlertDialog.Builder alt = new AlertDialog.Builder(context);
+                                AlertDialog.Builder alt = new AlertDialog.Builder(story_see.this);
                                 alt.setTitle("Remove !").setMessage("Do you want to remove this From the Highlight")
                                         .setCancelable(true)
                                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -324,7 +308,7 @@ public class story_see extends AppCompatActivity {
                                                             .child(highlst.get(counter).getHighlightid()).delete();
                                                     FirebaseDatabase.getInstance().getReference().child("info").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                                             .child("highlights").child(highlst.get(counter).getHighlightid()).removeValue();
-                                                    ((Activity) context).finish();
+                                                    ((Activity) story_see.this).finish();
                                                 } else {
                                                     FirebaseDatabase.getInstance().getReference().child("info").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                                             .child("highlights").child(highlst.get(counter).getHighlightid()).child("statusmodelist").child(statlst.get(counter).getStatusid()).removeValue();
@@ -346,9 +330,9 @@ public class story_see extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 topp.setEnabled(false);
-                Intent tent = new Intent(context, Mainactivity.class);
+                Intent tent = new Intent(story_see.this, Mainactivity.class);
                 tent.putExtra("userid", userid);
-                (context).startActivity(tent);
+                (story_see.this).startActivity(tent);
                 topp.setEnabled(true);
             }
         });
@@ -357,12 +341,12 @@ public class story_see extends AppCompatActivity {
             public void onClick(View v) {
                 seevw.setEnabled(false);
                 if (highlst == null) {
-                    (context).startActivity(new Intent(context, com.example.honeymoon.view.class));
+                    (story_see.this).startActivity(new Intent(story_see.this, com.example.honeymoon.view.class));
                 } else {
-                    Intent ient = new Intent(context, seen.class);
+                    Intent ient = new Intent(story_see.this, seen.class);
                     ient.putExtra("date", statlst.get(counter).getTime().substring(0, 10));
                     ient.putExtra("purpose", "allstories");
-                    (context).startActivity(ient);
+                    (story_see.this).startActivity(ient);
                 }
                 seevw.setEnabled(true);
             }
@@ -371,8 +355,9 @@ public class story_see extends AppCompatActivity {
         spv.setStoriesListener(new StoriesProgressView.StoriesListener() {
             @Override
             public void onNext() {
-                Toast.makeText(context, counter + "", Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(story_see.this, counter + "", Toast.LENGTH_SHORT).show();
+                if(counter +1>=statlst.size()) return;
+                counter++;
                 if (type==null) {
 
                     Picasso.get().load(statlst.get(counter).getUri()).into(imgg);
@@ -389,8 +374,8 @@ public class story_see extends AppCompatActivity {
                     return;
                 }
 
-
-                Toast.makeText(context, counter + "", Toast.LENGTH_SHORT).show();
+                counter--;
+                Toast.makeText(story_see.this, counter + "", Toast.LENGTH_SHORT).show();
 
                 if (type==null) {
 
@@ -405,10 +390,10 @@ public class story_see extends AppCompatActivity {
             @Override
             public void onComplete() {
 
-                ((Activity) context).finish();
+                ((Activity) story_see.this).finish();
 //                spv.destroy();
 //                int ui = counter-1;
-//                Toast.makeText(context,ui+"", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(story_see.this,ui+"", Toast.LENGTH_SHORT).show();
 
 //        Activity act =
 //                spv.startStories(0);
@@ -540,7 +525,7 @@ public class story_see extends AppCompatActivity {
          */
         public void getstory(){
           FirebaseDatabase.getInstance().getReference().child("info").child(userid).child("story").addListenerForSingleValueEvent(new ValueEventListener() {
-            @RequiresApi(api = Build.VERSION_CODES.O)
+
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -582,6 +567,24 @@ public class story_see extends AppCompatActivity {
                     finish();
                 }
 
+                statusmodel stadel = statlst.get(counter);
+                spv.setStoriesCount(statlst.size());
+//            Toast.makeText(story_see.this, , Toast.LENGTH_SHORT).show();
+                setstoryseen(stadel);
+                Picasso.get().load(stadel.getUri()).into(imgg, new Callback() {
+                    @Override
+                    public void onSuccess() {
+                        spv.resume();
+                    }
+
+                    @Override
+                    public void onError(Exception e) {
+
+                    }
+                });
+                spv.setStoryDuration(5000L);
+
+                spv.startStories(counter);
             }
             //
             @Override
