@@ -31,7 +31,7 @@
                 android:padding="7dp">
 
             </de.hdodenhof.circleimageview.CircleImageView>
-            <com.hendraanggrian.appcompat.widget.SocialTextView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:id="@+id/sstv"
@@ -41,7 +41,7 @@
                 android:layout_toRightOf="@+id/tgpro"
                 android:textColor="@color/white"
                 android:textSize="17dp">
-            </com.hendraanggrian.appcompat.widget.SocialTextView>
+            </TextView>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

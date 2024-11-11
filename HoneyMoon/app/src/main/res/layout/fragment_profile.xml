@@ -82,7 +82,7 @@
 
 
 
-                    <com.zolad.zoominimageview.ZoomInImageView
+                    <ImageView
                             android:id="@+id/covimg"
                             android:layout_width="match_parent"
                             android:layout_height="250dp"
@@ -92,7 +92,7 @@
                             android:background="@drawable/solidrect3"
                             >
 
-                        </com.zolad.zoominimageview.ZoomInImageView>
+                        </ImageView>
 
 
 
@@ -180,16 +180,6 @@
                             android:src="@mipmap/logo">
 
                         </de.hdodenhof.circleimageview.CircleImageView>
-                        <!--                    <com.zolad.zoominimageview.ZoomInImageView-->
-                        <!--                        android:id="@+id/pro"-->
-                        <!--                        android:layout_width="120dp"-->
-                        <!--                        android:layout_height="120dp"-->
-                        <!--                        android:layout_centerInParent="true"-->
-                        <!--                        android:scaleType="centerCrop"-->
-                        <!--                        android:src="@mipmap/logo"-->
-                        <!--                        android:layout_gravity="center">-->
-                        <!--                    </com.zolad.zoominimageview.ZoomInImageView>-->
-
 
                     </RelativeLayout>
 
