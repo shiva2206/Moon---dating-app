@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +29,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
-import com.hendraanggrian.appcompat.widget.SocialEditText;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -50,7 +50,7 @@ public class comments extends AppCompatActivity {
     private RecyclerView recy;
     private List<postmodel> lstpostmdl;
     private List<commentsmodel> commlst;
-    private SocialEditText edt;
+    private EditText edt;
     private effecy cl;
     private SwipeRefreshLayout srl;
     private postmodel psdel;

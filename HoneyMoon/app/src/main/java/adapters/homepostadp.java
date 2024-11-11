@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.PopupMenu;
@@ -42,9 +43,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
-import com.hendraanggrian.appcompat.widget.SocialEditText;
-import com.hendraanggrian.appcompat.widget.SocialTextView;
-import com.hendraanggrian.appcompat.widget.SocialView;
 import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
@@ -124,22 +122,22 @@ public class homepostadp extends RecyclerView.Adapter<homepostadp.viewholder> {
         getcomcount(holder.nocomm, pl);
         getshrecount(holder.noshare, pl);
 
-        holder.descrip.setOnHashtagClickListener(new SocialView.OnClickListener() {
-            @Override
-            public void onClick(@NonNull SocialView view, @NonNull CharSequence text) {
-                holder.descrip.setEnabled(false);
-                if ((holder.comm.getTag()+"").equals("yes")) {
-                    Intent inte = new Intent(context, Mainactivity.class);
-                    inte.putExtra("hashtag", text);
-                    context.startActivity(inte);
-                }else{
-                    Toast.makeText(context, "This Post doesn't exist", Toast.LENGTH_SHORT).show();
-
-                }
-                holder.descrip.setEnabled(true);
-
-            }
-        });
+//        holder.descrip.setOnHashtagClickListener(new SocialView.OnClickListener() {
+//            @Override
+//            public void onClick(@NonNull SocialView view, @NonNull CharSequence text) {
+//                holder.descrip.setEnabled(false);
+//                if ((holder.comm.getTag()+"").equals("yes")) {
+//                    Intent inte = new Intent(context, Mainactivity.class);
+//                    inte.putExtra("hashtag", text);
+//                    context.startActivity(inte);
+//                }else{
+//                    Toast.makeText(context, "This Post doesn't exist", Toast.LENGTH_SHORT).show();
+//
+//                }
+//                holder.descrip.setEnabled(true);
+//
+//            }
+//        });
         holder.tgs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -462,12 +460,12 @@ public class homepostadp extends RecyclerView.Adapter<homepostadp.viewholder> {
                     holder.editdes.setEnabled(false);
                     if (!holder.editdes.equals(holder.descrip)) {
 
-                        for (String i : holder.descrip.getHashtags()) {
-                            FirebaseDatabase.getInstance().getReference().child("hashs").child(i).removeValue();
-                        }
-                        for (String j : holder.editdes.getHashtags()) {
-                            FirebaseDatabase.getInstance().getReference().child("hashs").child(j).child(pl.getPostid()).setValue(pl);
-                        }
+//                        for (String i : holder.descrip.getHashtags()) {
+//                            FirebaseDatabase.getInstance().getReference().child("hashs").child(i).removeValue();
+//                        }
+//                        for (String j : holder.editdes.getHashtags()) {
+//                            FirebaseDatabase.getInstance().getReference().child("hashs").child(j).child(pl.getPostid()).setValue(pl);
+//                        }
                         FirebaseDatabase.getInstance().getReference().child("info").child(pl.getPublisherid()).child("posts").child(pl.getPostid())
                                 .child("description").setValue(holder.editdes.getText().toString());
                         holder.descrip.setText(holder.editdes.getText().toString());
@@ -754,9 +752,9 @@ public class homepostadp extends RecyclerView.Adapter<homepostadp.viewholder> {
         private TextView usernme, time, loc, nolikes, nocomm, noshare, remtag, notg;
         private ImageView bcg;
         private VideoView vvvv;
-        private SocialEditText editdes;
+        private EditText editdes;
         private Button done;
-        private SocialTextView descrip;
+        private TextView descrip;
         private RecyclerView effrecy;
 
         public viewholder(@NonNull View itemView) {

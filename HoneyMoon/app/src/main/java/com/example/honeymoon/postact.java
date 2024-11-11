@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.webkit.MimeTypeMap;
 import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,7 +40,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
-import com.hendraanggrian.appcompat.widget.SocialEditText;
+//import com.hendraanggrian.appcompat.widget.SocialEditText;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -56,7 +57,7 @@ import utility.NetworkChangeListener;
 public class postact extends AppCompatActivity {
     private ImageView iv, close;
     public List<usermodel> alstuser;
-    private SocialEditText soedts;
+    private EditText soedts;
     private TextView post;
     private Uri uri;
     private VideoView vv;

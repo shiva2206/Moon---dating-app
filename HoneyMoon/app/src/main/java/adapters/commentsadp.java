@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -34,7 +35,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.hendraanggrian.appcompat.widget.SocialEditText;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -558,7 +558,7 @@ public class commentsadp extends RecyclerView.Adapter<commentsadp.viewholder>{
         private TextView reply,comm,username,done,nolik,tme,repusrnm;
         private RecyclerView recyclerView;
         private RelativeLayout relativeLayout,cdf;
-        private SocialEditText socioreply;
+        private EditText socioreply;
 
 
         public viewholder(@NonNull View itemView) {

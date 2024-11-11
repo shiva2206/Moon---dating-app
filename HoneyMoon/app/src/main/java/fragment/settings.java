@@ -1,43 +1,27 @@
 package fragment;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Build;
+
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.provider.ContactsContract;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.RadioGroup;
-import android.widget.SeekBar;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.honeymoon.Mainactivity;
 import com.example.honeymoon.R;
-import com.example.honeymoon.blockedconts;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.hendraanggrian.appcompat.widget.SocialTextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import adapters.settingadp;
 import model.usermodel;
-
-import static android.content.Context.MODE_PRIVATE;
-import static com.example.honeymoon.Mainactivity.frag;
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link settings} factory method to

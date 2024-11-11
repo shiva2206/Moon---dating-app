@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SwitchCompat;
@@ -16,7 +17,6 @@ import com.example.honeymoon.R;
 import com.example.honeymoon.blockedconts;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-import com.hendraanggrian.appcompat.widget.SocialTextView;
 
 import java.util.List;
 
@@ -316,7 +316,7 @@ public class settingadp extends RecyclerView.Adapter<settingadp.svhder> {
         private SwitchCompat lstsce,priva,loc,tg,showcrubut;
         private Button dele,blckc;
         private RadioGroup mat,adm,cru,fri;
-        private SocialTextView soci;
+        private TextView soci;
         private usermodel settmodel;
 
         public svhder(@NonNull View itemView) {

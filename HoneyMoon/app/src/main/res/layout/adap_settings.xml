@@ -417,13 +417,13 @@
                 >
 
             </Button>
-            <com.hendraanggrian.appcompat.widget.SocialTextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/funpa"
                 android:visibility="gone">
 
-            </com.hendraanggrian.appcompat.widget.SocialTextView>
+            </TextView>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 

@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.honeymoon.R;
-import com.hendraanggrian.appcompat.widget.SocialTextView;
+//import com.hendraanggrian.appcompat.widget.SocialTextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -90,7 +90,7 @@ public class tagadp extends RecyclerView.Adapter<tagadp.vviehdr>{
 
     public class vviehdr extends RecyclerView.ViewHolder{
 
-        private SocialTextView soci;
+        private TextView soci;
         private ImageView clos,prof;
         private TextView name;
 
